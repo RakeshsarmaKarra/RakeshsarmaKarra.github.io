@@ -3,153 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rakesh Sarma Karra - Portfolio</title>
+    <title>Rakesh Sarma Karra - Data Scientist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        /* Global Styles */
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #121212;
-            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            background-color: #f4f4f4;
+            color: #333;
         }
-        
         .container {
             max-width: 800px;
-            background: #1e1e1e;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0px 10px 30px rgba(0, 255, 255, 0.3);
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
             text-align: center;
-            animation: fadeIn 1s ease-in-out;
         }
-
-        /* Headings */
-        h1 {
-            color: #00ffff;
-            font-size: 2.5em;
-            margin-bottom: 5px;
+        .header {
+            text-align: center;
+            padding: 20px 0;
         }
-        h3 {
-            color: #f1c40f;
-            font-size: 1.3em;
-            margin-bottom: 15px;
+        .header h1 {
+            color: #2c3e50;
+            font-weight: 600;
         }
-
-        /* Links & Buttons */
-        a {
-            color: #00ffff;
+        .header p {
+            font-size: 18px;
+            color: #555;
+        }
+        .links {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .links a {
+            margin: 0 10px;
             text-decoration: none;
-            font-weight: bold;
-            transition: all 0.3s ease;
+            font-weight: 600;
+            color: #3498db;
         }
-        a:hover {
-            color: #ffcc00;
+        .links a:hover {
             text-decoration: underline;
         }
-
-        .btn {
-            display: inline-block;
-            background-color: #00ffff;
-            color: #121212;
-            padding: 10px 20px;
-            margin: 10px;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: all 0.3s ease-in-out;
-        }
-
-        .btn:hover {
-            background-color: #ffcc00;
-            color: #121212;
-            transform: scale(1.05);
-        }
-
-        /* Section Styles */
         .section {
             margin: 20px 0;
             padding: 15px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
+            background: #f9f9f9;
+            border-left: 4px solid #3498db;
+            border-radius: 5px;
         }
-
-        /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
+        .button {
+            display: inline-block;
+            padding: 10px 15px;
+            background: #3498db;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
         }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            body {
-                padding: 20px;
-            }
-            .container {
-                width: 95%;
-            }
+        .button:hover {
+            background: #2980b9;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Rakesh Sarma Karra</h1>
-        <h3>M.S. Candidate in Advanced Data Analytics, 2025</h3>
+        <div class="header">
+            <h1>Rakesh Sarma Karra</h1>
+            <p>M.S. Candidate in Advanced Data Analytics, 2025</p>
+        </div>
 
-        <div class="section">
-            <a class="btn" href="https://github.com/RakeshsarmaKarra">View My GitHub Profile</a>
+        <div class="links">
+            <a href="https://github.com/RakeshsarmaKarra" class="button">View My GitHub Profile</a>
+            <a href="https://github.com/RakeshsarmaKarra.zip" class="button">Download ZIP</a>
+            <a href="https://github.com/RakeshsarmaKarra.tar.gz" class="button">Download TAR</a>
         </div>
 
         <div class="section">
-            <h3>Download</h3>
-            <a class="btn" href="https://github.com/RakeshsarmaKarra/RakeshsarmaKarra.github.io/archive/refs/heads/main.zip">ZIP File</a>
-            <a class="btn" href="https://github.com/RakeshsarmaKarra/RakeshsarmaKarra.github.io/tarball/main">TAR Ball</a>
-            <a class="btn" href="https://github.com/RakeshsarmaKarra">View On GitHub</a>
-        </div>
-
-        <div class="section">
-            <h3>Technical Skills</h3>
+            <h2>Technical Skills</h2>
             <p>Python, R, SQL, Machine Learning, Data Visualization, Cloud Technologies</p>
         </div>
 
         <div class="section">
-            <h3>Relevant Coursework</h3>
+            <h2>Relevant Coursework</h2>
             <p>Regression Modeling, Decision Trees, Clustering, Machine Learning, Time Series Forecasting, Data Engineering</p>
         </div>
 
         <div class="section">
-            <h3>Contact Me</h3>
-            <p>Email: your-email@example.com</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/rakeshsarmakarra">Rakesh Sarma Karra</a></p>
+            <h2>Contact Me</h2>
+            <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/RakeshsarmaKarra" target="_blank">Rakesh Sarma Karra</a></p>
         </div>
 
         <div class="section">
-            <h3>Education</h3>
-            <p>University of North Texas, Denton, TX</p>
+            <h2>Education</h2>
+            <p><strong>University of North Texas, Denton, TX</strong></p>
             <p>M.S. Advanced Data Analytics (Dec 2024)</p>
+            <p>Bachelor's Degree (Your University & Graduation Year)</p>
         </div>
 
         <div class="section">
-            <h3>Projects</h3>
+            <h2>Projects</h2>
+            <p><strong>Healthcare Analytics - Improving Patient Engagement</strong></p>
+            <a href="#" class="button">View Case Study</a>
+            <a href="#" class="button">View Tableau Dashboard</a>
 
-            <h4>📊 Healthcare Analytics - Improving Patient Engagement</h4>
-            <a class="btn" href="#">View Case Study</a>
-            <a class="btn" href="#">View Tableau Dashboard</a>
+            <p><strong>Predicting Customer Outcomes from Insurance Data</strong></p>
+            <a href="#" class="button">View Insights</a>
 
-            <h4>📈 Predicting Customer Outcomes from Insurance Data</h4>
-            <a class="btn" href="#">View Insights</a>
+            <p><strong>Optimizing AI Models for Preventive Care</strong></p>
+            <a href="#" class="button">View Report</a>
 
-            <h4>🔮 Optimizing AI Models for Preventive Care</h4>
-            <a class="btn" href="#">View Report</a>
-
-            <h4>📊 Tableau Dashboard for Predictive Analytics</h4>
-            <a class="btn" href="#">View Tableau Dashboard</a>
+            <p><strong>Tableau Dashboard for Predictive Analytics</strong></p>
+            <a href="#" class="button">View Tableau Dashboard</a>
         </div>
 
-        <p style="margin-top: 20px;">🌎 Hosted on GitHub Pages — Theme by Rakesh</p>
+        <p style="text-align: center; font-size: 12px; color: #777;">Hosted on GitHub Pages — Theme by OrderedList</p>
     </div>
 </body>
 </html>
