@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Portfolio of Berker Senol, AI Engineer and Machine Learning Researcher specializing in optimization, deep learning, and applied systems.">
+  <title>Berker Senol | AI Engineer </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="importmap">
+    {
+      "imports": {
+        "@google/genai": "https://esm.sh/@google/genai@^1.37.0"
+      }
+    }
+    </script>
+  <link rel="stylesheet" href="/index.css">
+</head>
+
+<body class="selection:bg-white selection:text-black overflow-x-hidden bg-zinc-950 text-zinc-300 light-mode">
+
+  <!-- Navigation -->
+  <nav
+    class="fixed top-0 left-0 w-full z-50 bg-white px-6 md:px-12 py-8 flex justify-between items-center border-b border-zinc-200">
+    <div class="text-xl font-serif italic tracking-tighter cursor-pointer text-black" onclick="window.scrollTo(0,0)">
+      Berker Senol</div>
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex gap-8 md:gap-12">
+      <a href="#about" class="nav-link text-[10px] uppercase tracking-[0.2em] text-zinc-500 hover:text-black">About</a>
+      <a href="#experience"
+        class="nav-link text-[10px] uppercase tracking-[0.2em] text-zinc-500 hover:text-black">Experience</a>
+      <a href="#projects"
+        class="nav-link text-[10px] uppercase tracking-[0.2em] text-zinc-500 hover:text-black">Projects</a>
+      <a href="#skills"
+        class="nav-link text-[10px] uppercase tracking-[0.2em] text-zinc-500 hover:text-black">Skills</a>
+      <a href="#hobbies"
+        class="nav-link text-[10px] uppercase tracking-[0.2em] text-zinc-500 hover:text-black">Hobbies</a>
+      <a href="#contact"
+        class="nav-link text-[10px] uppercase tracking-[0.2em] text-zinc-500 hover:text-black">Contact</a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button id="mobile-menu-btn" class="md:hidden text-black focus:outline-none p-2" aria-label="Open Menu">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+      class="fixed inset-0 bg-white z-[60] flex flex-col items-center justify-center gap-8 hidden transition-opacity duration-300">
+      <button id="close-menu-btn" class="absolute top-8 right-6 text-black p-2" aria-label="Close Menu">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+      <a href="#about" class="mobile-nav-link text-2xl font-serif italic text-zinc-800 hover:text-black">About</a>
+      <a href="#experience"
+        class="mobile-nav-link text-2xl font-serif italic text-zinc-800 hover:text-black">Experience</a>
+      <a href="#projects" class="mobile-nav-link text-2xl font-serif italic text-zinc-800 hover:text-black">Projects</a>
+      <a href="#skills" class="mobile-nav-link text-2xl font-serif italic text-zinc-800 hover:text-black">Skills</a>
+      <a href="#hobbies" class="mobile-nav-link text-2xl font-serif italic text-zinc-800 hover:text-black">Hobbies</a>
+      <a href="#contact" class="mobile-nav-link text-2xl font-serif italic text-zinc-800 hover:text-black">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Theme Toggle -->
+  <button id="theme-btn"
+    class="fixed bottom-8 left-8 z-50 w-12 h-12 bg-zinc-800 text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-xl border border-zinc-700"
+    aria-label="Toggle Theme">
+    <!-- Sun Icon (Variables for visibility in CSS) -->
+    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="5" />
+      <path
+        d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+    </svg>
+    <!-- Moon Icon -->
+    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+    </svg>
+  </button>
+
+  <!-- Hero Section -->
+  <section id="home" class="h-screen flex flex-col justify-center px-6 md:px-12 relative max-w-7xl mx-auto">
+    <h2 class="text-zinc-500 uppercase tracking-[0.4em] text-xs mb-6 fade-up">Data Scientist & Machine Learning Engineer
+    </h2>
+    <h1 class="text-4xl md:text-7xl font-serif leading-[1.1] tracking-tight mb-8 fade-up text-zinc-100"
+      style="transition-delay: 0.1s">
+      Data-Centric Intelligence <br />
+      <span class="italic text-zinc-400 text-3xl md:text-5xl block mt-4">From data understanding to reliable models and
+        systems, I like solving business problems using data</span>
+    </h1>
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 fade-up" style="transition-delay: 0.2s">
+      <p class="max-w-xl text-zinc-400 text-lg font-light leading-relaxed">
+        I build robust, data-driven solutions across data science, machine learning, deep learning, and applied AI.
+        Recently graduated from the University of Padua in ICT (AI Specialization), with a strong focus on translating
+        data into dependable real-world systems.
+      </p>
+      <div class="hidden md:flex flex-col gap-2">
+        <span class="text-zinc-600 text-[10px] uppercase tracking-widest">Base</span>
+        <span class="text-sm uppercase tracking-widest text-zinc-300">Padua, Italy</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 md:py-32 px-6 md:px-12 bg-zinc-900/50 text-zinc-300 border-t border-zinc-500">
+    <div class="max-w-5xl mx-auto">
+      <span class="section-title">Background</span>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-16 items-start">
+        <div class="md:col-span-2">
+          <p class="text-2xl font-light leading-relaxed mb-8 fade-up text-zinc-200">
+            I started in Mechanical Engineering, building a solid understanding of systems, modeling, and optimization.
+            Over time, I realized that many real-world problems could be solved more efficiently through data-driven
+            intelligence, so I transitioned into AI and Data Science.
+          </p>
+          <p class="text-lg text-zinc-500 font-light leading-relaxed fade-up">
+            I recently completed my Master’s in ICT (AI Specialization) at the University of Padua. I specialize in
+            applying machine learning and optimization techniques to real-world infrastructure challenges, focusing on
+            calibrating systems and improving performance through data. My goal is to translate complex data into
+            actionable solutions that deliver measurable business impact.
+          </p>
+        </div>
+        <div class="relative fade-up group">
+          <div
+            class="absolute inset-0 bg-zinc-800 rotate-6 rounded-2xl opacity-20 group-hover:rotate-3 transition-transform duration-500">
+          </div>
+          <img src="images/berker_senol.jpg" alt="Berker Senol"
+            class="relative w-full h-auto rounded-2xl shadow-2xl group-hover:saturate-150 transition-all duration-500 object-cover border border-zinc-800/50">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="py-20 md:py-32 px-6 md:px-12 bg-zinc-950 text-zinc-100 border-t border-zinc-500">
+    <div class="max-w-5xl mx-auto">
+      <span class="section-title border-zinc-800">Experience</span>
+
+      <div class="space-y-24">
+        <!-- Role 1 -->
+        <div class="fade-up group">
+          <div class="flex flex-col md:flex-row justify-between md:items-baseline mb-6">
+            <h3 class="text-3xl font-serif italic mb-2 md:mb-0 text-zinc-100">Machine Learning Intern – Master’s Thesis
+            </h3>
+            <div class="flex flex-col md:items-end text-right md:w-auto">
+              <span class="text-zinc-400 text-sm font-medium mb-1">January 2025 – September 2025</span>
+              <span class="text-zinc-500 text-xs tracking-widest uppercase">Padua, Italy</span>
+            </div>
+          </div>
+          <ul class="list-disc list-outside ml-5 space-y-4 text-zinc-400 font-light max-w-3xl marker:text-zinc-600">
+            <li>Designed optimization frameworks integrating <strong>Genetic Algorithms, Differential Evolution, JADE,
+                CMA-ES</strong>, and Reinforcement Learning for hydraulic system calibration.</li>
+            <li>Achieved <strong>0.04% RMSE</strong> between simulated and observed pressure and flow
+              values.</li>
+            <li>Built a flexible and reusable Python system for project-specific calibration tasks.</li>
+          </ul>
+        </div>
+
+        <!-- Role 2 -->
+        <div class="fade-up group">
+          <div class="flex flex-col md:flex-row justify-between md:items-baseline mb-6">
+            <h3 class="text-3xl font-serif italic mb-2 md:mb-0 text-zinc-100">Data Scientist Intern</h3>
+            <div class="flex flex-col md:items-end text-right md:w-auto">
+              <span class="text-zinc-400 text-sm font-medium mb-1">September 2022 – June 2023</span>
+              <span class="text-zinc-500 text-xs tracking-widest uppercase">Istanbul, Turkey</span>
+            </div>
+          </div>
+          <ul class="list-disc list-outside ml-5 space-y-4 text-zinc-400 font-light max-w-3xl marker:text-zinc-600">
+            <li>Developed and compared CNN architectures (DenseNet, ResNet, YOLO) for medical image classification,
+              achieving
+              <strong>95.49% validation accuracy</strong> on chest X-ray datasets.
+            </li>
+            <li>Developed real estate regression models using conventional machine learning algorithms to predict market
+              trends by using web scraped data.</li>
+            <li>Reduced customer budget usage by <strong>15%</strong> through improved predictive modeling and resource
+              allocation advice.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 md:py-32 px-6 md:px-12 bg-zinc-900/50 border-t border-zinc-500">
+    <div class="max-w-6xl mx-auto">
+      <span class="section-title border-zinc-800">Selected Projects</span>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <!-- Project 1: QuitSmart -->
+        <a href="https://github.com/berkersenol/QuitSmart-RAG" target="_blank"
+          class="block fade-up p-8 border border-zinc-800 hover:border-zinc-700 transition-colors bg-zinc-950/50 group">
+          <h3
+            class="text-xl font-serif text-zinc-100 mb-4 group-hover:text-white group-hover:underline decoration-zinc-500 underline-offset-4 transition-all">
+            AI-Driven Smoking Cessation Tool</h3>
+          <p class="text-zinc-400 text-sm mb-6 leading-relaxed">
+            Personalized support tool utilizing LLaMA2 (13B) and RAG. Delivers context-aware responses to support users,
+            leveraging vector databases for knowledge retrieval.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="tech-tag bg-zinc-900 border-zinc-800">NLP</span>
+            <span class="tech-tag bg-zinc-900 border-zinc-800">RAG</span>
+            <span class="tech-tag bg-zinc-900 border-zinc-800">Vector DB</span>
+          </div>
+        </a>
+
+        <!-- Project 2: Barbie Analysis -->
+        <a href="https://github.com/berkersenol/The-Affect-of-Barbie-the-Movie-on-the-online-discussion-about-feminism"
+          target="_blank"
+          class="block fade-up p-8 border border-zinc-800 hover:border-zinc-700 transition-colors bg-zinc-950/50 group">
+          <h3
+            class="text-xl font-serif text-zinc-100 mb-4 group-hover:text-white group-hover:underline decoration-zinc-500 underline-offset-4 transition-all">
+            Data-Driven Discourse Analysis</h3>
+          <p class="text-zinc-400 text-sm mb-6 leading-relaxed">
+            Analyzed feminist discourse dynamics on Reddit and TikTok using BERTopic, LIWC, and community detection
+            algorithms. Revealed key community drivers and sentiment distinctness.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="tech-tag bg-zinc-900 border-zinc-800">Python</span>
+            <span class="tech-tag bg-zinc-900 border-zinc-800">BERTopic</span>
+            <span class="tech-tag bg-zinc-900 border-zinc-800">Web Scraping</span>
+
+
+          </div>
+        </a>
+
+        <!-- Project 3: Chatbot -->
+        <a href="https://github.com/berkersenol/AI-Powered-Customer-Service-Chatbot-RAG-" target="_blank"
+          class="block fade-up p-8 border border-zinc-800 hover:border-zinc-700 transition-colors bg-zinc-950/50 group">
+          <h3
+            class="text-xl font-serif text-zinc-100 mb-4 group-hover:text-white group-hover:underline decoration-zinc-500 underline-offset-4 transition-all">
+            AI-Powered Customer Service Chatbot (RAG)</h3>
+          <p class="text-zinc-400 text-sm mb-6 leading-relaxed">
+            Secure, context-aware chatbot using FastAPI, LangChain, and FAISS/ChromaDB. Implemented multi-turn
+            conversations and LLM safety mechanisms.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="tech-tag bg-zinc-900 border-zinc-800">FastAPI</span>
+            <span class="tech-tag bg-zinc-900 border-zinc-800">RAG</span>
+            <span class="tech-tag bg-zinc-900 border-zinc-800">LangChain</span>
+          </div>
+        </a>
+
+        <!-- Project 4: GANs (Static) -->
+        <div class="block fade-up p-8 border border-zinc-500 transition-colors bg-zinc-950/50 group">
+          <h3 class="text-xl font-serif text-zinc-100 mb-4 transition-all">
+            Image-to-Image Translation with GANs</h3>
+          <p class="text-zinc-400 text-sm mb-6 leading-relaxed">
+            Implemented and compared U-Net, PatchGAN, and WGAN architectures on COCO and ImageNet datasets. Evaluated
+            performance using FID, PSNR, and SSIM metrics.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="tech-tag bg-zinc-900 border-zinc-800">Computer Vision</span>
+            <span class="tech-tag bg-zinc-900 border-zinc-800">PyTorch</span>
+            <span class="tech-tag bg-zinc-900 border-zinc-800">GANs</span>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills & Education Section -->
+  <section id="skills" class="py-20 md:py-32 px-6 md:px-12 bg-zinc-950 text-white border-t border-zinc-500">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-24">
+
+      <!-- Education -->
+      <div class="fade-up">
+        <span class="section-title">Education</span>
+        <div class="space-y-12">
+          <div>
+            <div class="flex justify-between items-baseline mb-2">
+              <h3 class="text-xl font-serif">Master’s in ICT (AI)</h3>
+              <span class="text-xs text-zinc-500">2022-2025</span>
+            </div>
+            <p class="text-zinc-400 text-sm">University of Padua, Italy</p>
+          </div>
+          <div>
+            <div class="flex justify-between items-baseline mb-2">
+              <h3 class="text-xl font-serif">B.S. Mechanical Engineering</h3>
+              <span class="text-xs text-zinc-500">2016-2020</span>
+            </div>
+            <p class="text-zinc-400 text-sm">İzmir University of Economics, Turkey</p>
+          </div>
+
+          <div class="pt-8 border-t border-zinc-900">
+            <span class="section-title !pl-0 !border-0 !mb-4">Certifications</span>
+            <ul class="space-y-2 text-zinc-500 text-sm">
+              <li>Deep Learning Specialization – DeepLearning.AI</li>
+              <li>Machine Learning – Stanford Online</li>
+              <li>Structuring Machine Learning Projects</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skills -->
+      <div class="fade-up">
+        <span class="section-title">Technical Skills</span>
+        <div class="space-y-8">
+          <div>
+            <h4 class="text-xs uppercase tracking-widest text-zinc-500 mb-4">Programming & Frameworks</h4>
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">C++</span>
+              <span class="tech-tag">MATLAB</span>
+              <span class="tech-tag">FastAPI</span>
+            </div>
+          </div>
+          <div>
+            <h4 class="text-xs uppercase tracking-widest text-zinc-500 mb-4">ML & Deep Learning</h4>
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-tag">Scikit-learn</span>
+              <span class="tech-tag">TensorFlow</span>
+              <span class="tech-tag">PyTorch</span>
+              <span class="tech-tag">OpenCV</span>
+            </div>
+          </div>
+          <div>
+            <h4 class="text-xs uppercase tracking-widest text-zinc-500 mb-4">NLP</h4>
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-tag">LangChain</span>
+              <span class="tech-tag">LlamaIndex</span>
+              <span class="tech-tag">HuggingFace</span>
+              <span class="tech-tag">Transformers</span>
+            </div>
+          </div>
+          <div>
+            <h4 class="text-xs uppercase tracking-widest text-zinc-500 mb-4">Data Wrangling & Feature Engineering</h4>
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-tag">Pandas</span>
+              <span class="tech-tag">NumPy</span>
+              <span class="tech-tag">Matplotlib</span>
+              <span class="tech-tag">Seaborn</span>
+              <span class="tech-tag">PowerBI</span>
+            </div>
+          </div>
+          <div>
+            <h4 class="text-xs uppercase tracking-widest text-zinc-500 mb-4">Databases</h4>
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">SQL</span>
+              <span class="tech-tag">SQLite</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hobbies Section -->
+  <section id="hobbies" class="py-20 md:py-32 px-6 md:px-12 bg-zinc-900/50 text-zinc-300 border-t border-zinc-500">
+    <div class="max-w-4xl mx-auto">
+      <span class="section-title border-zinc-800">Interests & Hobbies</span>
+      <div class="space-y-8 text-lg font-light leading-relaxed text-zinc-400 fade-up">
+        <p>
+          Beyond my academic and professional interests, I value activities that help me grow both as a person and as a
+          collaborator. I played volleyball for five years, an experience that taught me discipline, commitment, and the
+          importance of working toward a shared goal. Being part of a team shaped how I approach challenges, reinforcing
+          the value of communication, consistency, and supporting others under pressure.
+        </p>
+        <p>
+          Outside of this structured environment, I enjoy watching anime, which offers me a more imaginative and
+          reflective space. Works such as <em>One Piece</em> and <em>Howl’s Moving Castle</em> stand out to me for their
+          rich worlds and emotionally driven stories. They encourage me to think creatively, see problems from different
+          perspectives, and appreciate the depth of well-designed systems and characters.
+        </p>
+        <p>
+          On a more social level, I enjoy spending time with friends at coffee shops, where conversations flow naturally
+          and shared moments create a sense of familiarity and belonging, similar to the atmosphere portrayed in the
+          series <em>Friends</em>. These moments allow me to slow down, recharge, and maintain a healthy balance between
+          focus and connection.
+        </p>
+        <p>
+          Finally, I have a strong passion for traveling, especially experiencing new places through the perspective of
+          local life. Immersing myself in different cultures has strengthened my adaptability, curiosity, and openness
+          to diverse ways of thinking, qualities that continuously influence both my personal mindset and my
+          professional approach.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-40 px-6 md:px-12 bg-zinc-950 text-center border-t border-zinc-500">
+    <div class="max-w-3xl mx-auto fade-up">
+      <h2 class="text-4xl md:text-5xl font-serif mb-8 text-white">Let's Connect.</h2>
+      <p class="text-zinc-500 text-lg font-light mb-12">
+        I am open to opportunities in Data Science, AI Engineering, Machine Learning, Deep Learning.
+      </p>
+      <div class="flex flex-col md:flex-row justify-center gap-8 md:gap-16 items-center">
+        <a href="mailto:berkersenol@outlook.com"
+          class="text-zinc-300 hover:text-white transition-colors border-b border-zinc-800 hover:border-white pb-1">Email</a>
+        <a href="https://www.linkedin.com/in/berker-senol-1b6b68213/" target="_blank"
+          class="text-zinc-300 hover:text-white transition-colors border-b border-zinc-800 hover:border-white pb-1">LinkedIn</a>
+        <a href="https://github.com/berkersenol/" target="_blank"
+          class="text-zinc-300 hover:text-white transition-colors border-b border-zinc-800 hover:border-white pb-1">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Assistant UI -->
+
+
+  <script type="module" src="index.js"></script>
+</body>
+
+</html>
