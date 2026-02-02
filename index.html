@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Portfolio of Rakesh Sarma Karra, Data Scientist and Machine Learning Engineer specializing in advanced analytics, machine learning, and business intelligence.">
+  <title>Rakesh Sarma Karra - Data Scientist & Machine Learning Engineer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "@google/genai": "https://esm.sh/@google/genai@^1.37.0"
+      }
+    }
+  </script>
+  <script type="module" crossorigin src="/portfolio/assets/index-B5vh7TBA.js"></script>
+  <link rel="stylesheet" crossorigin href="/portfolio/assets/index-BuBhpc7k.css">
+</head>
+
+<body class="selection:bg-white selection:text-black overflow-x-hidden bg-zinc-950 text-zinc-300 light-mode">
+
+  <!-- Navigation -->
+  <nav
+    class="fixed top-0 left-0 w-full z-50 bg-white px-6 md:px-16 lg:px-24 py-8 flex justify-between items-center border-b border-zinc-200">
+    <div class="text-xl font-serif italic tracking-tighter cursor-pointer text-black" onclick="window.scrollTo(0,0)">
+      Rakesh Sarma Karra
+    </div>
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex gap-6 lg:gap-8">
+      <a href="#about"
+        class="nav-link text-[10px] uppercase tracking-[0.2em] text-zinc-500 hover:text-black">About</a>
+      <a href="#experience"
+        class="nav-link text-[10px] uppercase tracking-[0.2em] text-zinc-500 hover:text-black">Experience</a>
+      <a href="#projects"
+        class="nav-link text-[10px] uppercase tracking-[0.2em] text-zinc-500 hover:text-black">Projects</a>
+      <a href="#education"
+        class="nav-link text-[10px] uppercase tracking-[0.2em] text-zinc-500 hover:text-black">Education</a>
+      <a href="#certifications"
+        class="nav-link text-[10px] uppercase tracking-[0.2em] text-zinc-500 hover:text-black">Certifications</a>
+      <a href="#honors"
+        class="nav-link text-[10px] uppercase tracking-[0.2em] text-zinc-500 hover:text-black">Honors</a>
+      <a href="#skills"
+        class="nav-link text-[10px] uppercase tracking-[0.2em] text-zinc-500 hover:text-black">Skills</a>
+      <a href="#contact"
+        class="nav-link text-[10px] uppercase tracking-[0.2em] text-zinc-500 hover:text-black">Contact</a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button id="mobile-menu-btn" class="md:hidden text-black focus:outline-none p-2" aria-label="Open Menu">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+      class="fixed inset-0 bg-white z-[60] flex flex-col items-center justify-center gap-8 hidden transition-opacity duration-300">
+      <button id="close-menu-btn" class="absolute top-8 right-6 text-black p-2" aria-label="Close Menu">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+      <a href="#about" class="mobile-nav-link text-2xl font-serif italic text-zinc-800 hover:text-black">About</a>
+      <a href="#experience"
+        class="mobile-nav-link text-2xl font-serif italic text-zinc-800 hover:text-black">Experience</a>
+      <a href="#projects"
+        class="mobile-nav-link text-2xl font-serif italic text-zinc-800 hover:text-black">Projects</a>
+      <a href="#education"
+        class="mobile-nav-link text-2xl font-serif italic text-zinc-800 hover:text-black">Education</a>
+      <a href="#certifications"
+        class="mobile-nav-link text-2xl font-serif italic text-zinc-800 hover:text-black">Certifications</a>
+      <a href="#honors"
+        class="mobile-nav-link text-2xl font-serif italic text-zinc-800 hover:text-black">Honors</a>
+      <a href="#skills"
+        class="mobile-nav-link text-2xl font-serif italic text-zinc-800 hover:text-black">Skills</a>
+      <a href="#contact"
+        class="mobile-nav-link text-2xl font-serif italic text-zinc-800 hover:text-black">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Theme Toggle -->
+  <button id="theme-btn"
+    class="fixed bottom-8 left-8 z-50 w-12 h-12 bg-zinc-800 text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-xl border border-zinc-700"
+    aria-label="Toggle Theme">
+    <!-- Sun Icon -->
+    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="5" />
+      <path
+        d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+    </svg>
+    <!-- Moon Icon -->
+    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+    </svg>
+  </button>
+
+  <!-- Hero Section -->
+  <section id="home"
+    class="flex flex-col px-6 md:px-16 lg:px-24 relative max-w-7xl mx-auto pt-40 pb-20 md:pt-52 md:pb-32">
+    <h2 class="text-zinc-500 uppercase tracking-[0.4em] text-xs mb-6 fade-up">
+      Data  &amp; AI Enthusiast
+    </h2>
+    <h1 class="text-4xl md:text-6xl font-serif leading-[1.1] tracking-tight mb-6 fade-up text-zinc-100"
+      style="transition-delay: 0.1s">
+      Data Scientist &amp; Machine Learning Engineer
+    </h1>
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 fade-up" style="transition-delay: 0.2s">
+      <p class="max-w-xl text-zinc-400 text-lg font-light leading-relaxed">
+        I am a Data Scientist specializing in advanced analytics, machine learning, and business intelligence, with
+        experience across banking, airlines, healthcare, and non‑profit domains. I enjoy building end‑to‑end solutions
+        from data engineering and modeling to visualization and stakeholder‑ready storytelling.
+      </p>
+      <div class="hidden md:flex flex-col gap-2">
+        <span class="text-zinc-600 text-[10px] uppercase tracking-widest">Base</span>
+        <span class="text-sm uppercase tracking-widest text-zinc-300">United States</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about"
+    class="py-20 md:py-32 px-6 md:px-16 lg:px-24 bg-zinc-900/50 text-zinc-300 border-t border-zinc-500">
+    <div class="max-w-6xl mx-auto">
+      <span class="section-title">Background</span>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-16 items-start">
+        <div class="md:col-span-2">
+          <p class="text-2xl font-light leading-relaxed mb-8 fade-up text-zinc-200">
+            Data Scientist with experience in financial risk, banking, airline and healthcare analytics. I design and
+            implement forecasting models, machine learning solutions, SQL automation pipelines, and dynamic dashboards
+            that support strategic and operational decision‑making.
+          </p>
+          <p class="text-lg text-zinc-500 font-light leading-relaxed fade-up">
+            I hold an M.S. in Mathematics &amp; Statistics (Data Science &amp; Advanced Analytics) from the University
+            of North Texas. My work spans supervised and unsupervised learning, time series forecasting, and
+            experiment‑driven analytics, with a strong focus on clear, actionable communication to business and
+            technical stakeholders.
+          </p>
+        </div>
+        <div class="relative fade-up group">
+          <div
+            class="absolute inset-0 bg-zinc-800 rotate-6 rounded-2xl opacity-20 group-hover:rotate-3 transition-transform duration-500">
+          </div>
+          <img src="/portfolio/assets/Rakesh%20K-D1y-f_SH.png" alt="Rakesh Sarma Karra"
+            class="relative w-full h-auto rounded-2xl shadow-2xl group-hover:saturate-150 transition-all duration-500 object-cover border border-zinc-800/50">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience"
+    class="py-20 md:py-32 px-6 md:px-16 lg:px-24 bg-zinc-950 text-zinc-100 border-t border-zinc-500">
+    <div class="max-w-6xl mx-auto">
+      <span class="section-title border-zinc-800">Experience</span>
+
+      <div class="space-y-24">
+
+        <!-- Data Analyst – Community Dreams -->
+        <div class="fade-up group">
+          <div class="flex flex-col md:flex-row justify-between md:items-baseline mb-6">
+            <h3 class="text-3xl font-serif italic mb-2 md:mb-0 text-zinc-100">
+              Data Analyst – Community Dreams
+            </h3>
+            <div class="flex flex-col md:items-end text-right md:w-auto">
+              <span class="text-zinc-400 text-sm font-medium mb-1">April 2025 – Present</span>
+              <span class="text-zinc-500 text-xs tracking-widest uppercase">Denton, United States</span>
+            </div>
+          </div>
+          <ul class="list-disc list-outside ml-5 space-y-4 text-zinc-400 font-light max-w-3xl marker:text-zinc-600">
+            <li>
+              Designed and implemented interactive dashboards in Google Looker Studio to visualize county and school-level enrolment patterns,
+              enabling stakeholders to identify geographic concentrations and variances for targeted outreach and resource allocation.
+            </li>
+            <li>
+              Designed web based child sponsore dashboard application.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Teaching Assistant And Research Data Scientist – University of North Texas -->
+        <div class="fade-up group">
+          <div class="flex flex-col md:flex-row justify-between md:items-baseline mb-6">
+            <h3 class="text-3xl font-serif italic mb-2 md:mb-0 text-zinc-100">
+              Teaching Assistant (Paid) &amp; Research Data Scientist (Volunteer) – University of North Texas
+            </h3>
+            <div class="flex flex-col md:items-end text-right md:w-auto">
+              <span class="text-zinc-400 text-sm font-medium mb-1">January 2024 – December 2024</span>
+              <span class="text-zinc-500 text-xs tracking-widest uppercase">Denton, United States</span>
+            </div>
+          </div>
+          <ul class="list-disc list-outside ml-5 space-y-4 text-zinc-400 font-light max-w-3xl marker:text-zinc-600">
+            <li>
+              Designed and delivered Python-based lab sessions covering advanced machine learning and big data analytics.                                                    
+            </li>
+            <li>
+              Conducted AI bias research, identifying and analyzing system, developer, and statistical biases in ML models.
+            </li>
+            <li>
+              Designed an AI reliability survey, revealing 68% of participants believed AI enhanced performance, providing insights into user trust and adoption.
+            </li>
+            <li>
+              Performed a comparative analysis of bias, hate speech detection, and sentiment classification across AI models from ChatGPT, Gemini, Meta AI, and Claude AI.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Data Scientist – American Airlines -->
+        <div class="fade-up group">
+          <div class="flex flex-col md:flex-row justify-between md:items-baseline mb-6">
+            <h3 class="text-3xl font-serif italic mb-2 md:mb-0 text-zinc-100">
+              Data Scientist – American Airlines
+            </h3>
+            <div class="flex flex-col md:items-end text-right md:w-auto">
+              <span class="text-zinc-400 text-sm font-medium mb-1">September 2023 – December 2023</span>
+              <span class="text-zinc-500 text-xs tracking-widest uppercase">United States - Remote</span>
+            </div>
+          </div>
+          <ul class="list-disc list-outside ml-5 space-y-4 text-zinc-400 font-light max-w-3xl marker:text-zinc-600">
+            <li>
+              Improved flight demand forecasting accuracy 78% using Random Forest with advanced feature engineering and time-series trend analysis.
+            </li>
+            <li>
+              Automated Python/SQL data pipelines, reducing processing time 60% and uncovering operational behavior patterns.
+            </li>
+            <li>
+              Built a congestion analysis framework using statistical metrics to support infrastructure capacity planning.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Data Scientist – Citi -->
+        <div class="fade-up group">
+          <div class="flex flex-col md:flex-row justify-between md:items-baseline mb-6">
+            <h3 class="text-3xl font-serif italic mb-2 md:mb-0 text-zinc-100">
+              Data Scientist – Citi
+            </h3>
+            <div class="flex flex-col md:items-end text-right md:w-auto">
+              <span class="text-zinc-400 text-sm font-medium mb-1">November 2021 – January 2023</span>
+              <span class="text-zinc-500 text-xs tracking-widest uppercase">India</span>
+            </div>
+          </div>
+          <ul class="list-disc list-outside ml-5 space-y-4 text-zinc-400 font-light max-w-3xl marker:text-zinc-600">
+            <li>
+              Developed machine learning and statistical models on credit and customer portfolios to support risk,
+              collections, and customer management strategies, improving prediction quality for key KPIs.
+            </li>
+            <li>
+              Enhanced data quality audits and compliance analytics using advanced SQL (CTE, joins, subqueries, case when) under CCPA 2020, accelerating validation and regulatory reporting.
+            </li>
+            <li>
+              Automated profiling and compliance reports with Python (Pandas Profiling) and scheduling tools (Autosys, Bitbucket), cutting manual validation effort by ~30% and improving monitoring of data integrity.
+            </li>
+            <li>
+              Designed and orchestrated ETL workflows in Apache Airflow to migrate data from CMR to MDM, increasing data stewardship reliability to 76% and stabilizing downstream analytics.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Data Analyst & Analytics Reporting – ICICI Bank -->
+        <div class="fade-up group">
+          <div class="flex flex-col md:flex-row justify-between md:items-baseline mb-6">
+            <h3 class="text-3xl font-serif italic mb-2 md:mb-0 text-zinc-100">
+              Data Analyst &amp; Analytics Reporting – ICICI Bank
+            </h3>
+            <div class="flex flex-col md:items-end text-right md:w-auto">
+              <span class="text-zinc-400 text-sm font-medium mb-1">March 2019 – October 2021</span>
+              <span class="text-zinc-500 text-xs tracking-widest uppercase">India</span>
+            </div>
+          </div>
+          <ul class="list-disc list-outside ml-5 space-y-4 text-zinc-400 font-light max-w-3xl marker:text-zinc-600">
+            <li>
+              Designed and automated reporting solutions in SQL, Excel, and BI tools to track operational KPIs and
+              client SLAs, reducing manual reporting time and improving data reliability.
+            </li>
+            <li>
+              Partnered with business stakeholders to translate ad‑hoc questions into repeatable dashboards and
+              analytical views, enabling faster decision‑making across operations and management.
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects"
+    class="py-20 md:py-32 px-4 md:px-16 lg:px-28 bg-zinc-900/50 border-t border-zinc-500">
+    <div class="max-w-8xl mx-auto">
+      <span class="section-title border-zinc-800">Projects</span>
+
+      <div class="grid grid-cols-1 2xl:grid-cols-2 gap-10 2xl:gap-12">
+
+        <!-- Humana Project Card -->
+        <div
+          class="block fade-up p-8 border border-zinc-800 hover:border-zinc-600 transition-colors bg-zinc-950/60 group rounded-2xl">
+          <div class="grid grid-cols-1 md:grid-cols-[1.7fr,1.3fr] gap-10 items-center">
+            <div class="flex justify-center">
+              <img
+                src="/portfolio/assets/Humana%20Image-q4RiKGJf.jpg"
+                alt="Predicting Unengaged Medicare Advantage Members"
+                class="w-full h-auto max-w-full object-contain rounded-xl border border-zinc-800 shadow-md bg-black" />
+            </div>
+            <div>
+              <h3
+                class="text-xl md:text-2xl font-serif text-zinc-100 mb-4 group-hover:text-white group-hover:underline decoration-zinc-500 underline-offset-4 transition-all">
+                Humana - Texas A&amp;M Healthcare Analytics Case Competition
+              </h3>
+              <p class="text-zinc-400 text-sm md:text-[15px] mb-6 leading-relaxed">
+                Built an XGBoost engagement model (ROC-AUC 0.76) with SHAP insights and KPIs to guide targeted outreach
+                and quantify business impact for Medicare Advantage members.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="tech-tag bg-zinc-900 border-zinc-800">Python</span>
+                <span class="tech-tag bg-zinc-900 border-zinc-800">Google Cloud Platform</span>
+                <span class="tech-tag bg-zinc-900 border-zinc-800">SQL</span>
+                <span class="tech-tag bg-zinc-900 border-zinc-800">Machine Learning</span>
+              </div>
+              <a
+                href="https://github.com/RakeshsarmaKarra/Humana-Mays-2024-Healthcare-Analytics-Case-Competition"
+                target="_blank"
+                class="text-sm text-zinc-300 hover:text-white underline decoration-zinc-500 underline-offset-4">
+                View on GitHub →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- American Airlines Hackathon Project Card -->
+        <div
+          class="block fade-up p-8 border border-zinc-800 hover:border-zinc-600 transition-colors bg-zinc-950/60 group rounded-2xl">
+          <div class="grid grid-cols-1 md:grid-cols-[1.7fr,1.3fr] gap-10 items-center">
+            <div>
+              <img
+                src="/portfolio/assets/AA%20Hack-a-thon%20Flyer-D4rfxJ1L.jpg"
+                alt="Destination Recommendation Engine – Customer Travel Behavior Modeling"
+                class="w-full h-auto max-w-full object-contain rounded-xl border border-zinc-800 shadow-md bg-black" />
+            </div>
+            <div>
+              <h3
+                class="text-xl md:text-2xl font-serif text-zinc-100 mb-4 group-hover:text-white group-hover:underline decoration-zinc-500 underline-offset-4 transition-all">
+                American Airlines Hackathon
+              </h3>
+              <p class="text-zinc-400 text-sm md:text-[15px] mb-6 leading-relaxed">
+                Developed ML-based features and prototypes to analyze customer travel behavior and surface actionable
+                insights for destination recommendation and operational planning.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="tech-tag bg-zinc-900 border-zinc-800">Python</span>
+                <span class="tech-tag bg-zinc-900 border-zinc-800">Snowflake</span>
+                <span class="tech-tag bg-zinc-900 border-zinc-800">SQL</span>
+                <span class="tech-tag bg-zinc-900 border-zinc-800">Machine Learning</span>
+              </div>
+              <a
+                href="https://github.com/RakeshsarmaKarra/American-Airlines-Hack-a-thon-OR-AA-/tree/main"
+                target="_blank"
+                class="text-sm text-zinc-300 hover:text-white underline decoration-zinc-500 underline-offset-4">
+                View on GitHub →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Peterbilt – UNT Business Analytics Hackathon Project Card -->
+        <div
+          class="block fade-up p-8 border border-zinc-800 hover:border-zinc-600 transition-colors bg-zinc-950/60 group rounded-2xl">
+          <div class="grid grid-cols-1 md:grid-cols-[1.7fr,1.3fr] gap-10 items-center">
+            <div>
+              <img
+                src="/portfolio/assets/UNT_Business_Analytics_Hack_a_thon-BesVceWy.png"
+                alt="Attribute Based Truck Warranty Modeling"
+                class="w-full h-auto max-w-full object-contain rounded-xl border border-zinc-800 shadow-md bg-black" />
+            </div>
+            <div>
+              <h3
+                class="text-xl md:text-2xl font-serif text-zinc-100 mb-4 group-hover:text-white group-hover:underline decoration-zinc-500 underline-offset-4 transition-all">
+                Peterbilt – UNT Business Analytics Hackathon
+              </h3>
+              <p class="text-zinc-400 text-sm md:text-[15px] mb-6 leading-relaxed">
+                Developed a multiclass XGBoost model to predict heavy-duty truck warranty cost segments from
+                configuration and claims data, improving macro ROC–AUC to 0.80 and surfacing high‑risk option bundles
+                for design and pricing decisions.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="tech-tag bg-zinc-900 border-zinc-800">Python</span>
+                <span class="tech-tag bg-zinc-900 border-zinc-800">Jupyter Notebook</span>
+                <span class="tech-tag bg-zinc-900 border-zinc-800">SQL</span>
+                <span class="tech-tag bg-zinc-900 border-zinc-800">Machine Learning</span>
+              </div>
+              <a
+                href="https://github.com/RakeshsarmaKarra/UNT-Business-Analytics-Hack-a-thon"
+                target="_blank"
+                class="text-sm text-zinc-300 hover:text-white underline decoration-zinc-500 underline-offset-4">
+                View on GitHub →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Teaching Assistant Eligibility Predictor Project Card -->
+        <div
+          class="block fade-up p-8 border border-zinc-800 hover:border-zinc-600 transition-colors bg-zinc-950/60 group rounded-2xl">
+          <div class="grid grid-cols-1 md:grid-cols-[1.7fr,1.3fr] gap-10 items-center">
+            <div>
+              <img
+                src="/portfolio/assets/TA%20Eligibilit%20Predictor-D9dzZV1-.png"
+                alt="Teaching Assistant Eligibility Predictor"
+                class="w-full h-auto max-w-full object-contain rounded-xl border border-zinc-800 shadow-md bg-black" />
+            </div>
+            <div>
+              <h3
+                class="text-xl md:text-2xl font-serif text-zinc-100 mb-4 group-hover:text-white group-hover:underline decoration-zinc-500 underline-offset-4 transition-all">
+                Teaching Assistant Eligibility Predictor using Deep Learning Models
+              </h3>
+              <p class="text-zinc-400 text-sm md:text-[15px] mb-6 leading-relaxed">
+                Built a model in R to streamline the teaching assistant selection process, evaluating over 1,200
+                applications and assigning probability scores to identify top candidates.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="tech-tag bg-zinc-900 border-zinc-800">R</span>
+                <span class="tech-tag bg-zinc-900 border-zinc-800">RShiny</span>
+                <span class="tech-tag bg-zinc-900 border-zinc-800">RStudio</span>
+                <span class="tech-tag bg-zinc-900 border-zinc-800">Neural Networks</span>
+              </div>
+              <a
+                href="https://github.com/RakeshsarmaKarra/Teaching-Assistant-Prediction-ML-"
+                target="_blank"
+                class="text-sm text-zinc-300 hover:text-white underline decoration-zinc-500 underline-offset-4">
+                View on GitHub →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Applied Data Science Capstone Project Card -->
+        <div
+          class="block fade-up p-8 border border-zinc-800 hover:border-zinc-600 transition-colors bg-zinc-950/60 group rounded-2xl">
+          <div class="grid grid-cols-1 md:grid-cols-[1.7fr,1.3fr] gap-10 items-center">
+            <div>
+              <img
+                src="/portfolio/assets/IBM%20Data%20Science%20Capstone%20Project%20Picture-DS9p6mfM.jpg"
+                alt="SpaceX Falcon 9 Landing Success Prediction for Reusable Rocket Cost Optimization"
+                class="w-full h-auto max-w-full object-contain rounded-xl border border-zinc-800 shadow-md bg-black" />
+            </div>
+            <div>
+              <h3
+                class="text-xl md:text-2xl font-serif text-zinc-100 mb-4 group-hover:text-white group-hover:underline decoration-zinc-500 underline-offset-4 transition-all">
+                SpaceX Falcon 9 Landing Success Prediction
+              </h3>
+              <p class="text-zinc-400 text-sm md:text-[15px] mb-6 leading-relaxed">
+                Built an end-to-end classification pipeline on SpaceX launch data, including API/web scraping, SQL and
+                Python-based EDA, feature engineering, and model evaluation to predict Falcon 9 landing success and
+                support reusable-rocket cost optimization.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="tech-tag bg-zinc-900 border-zinc-800">Python</span>
+                <span class="tech-tag bg-zinc-900 border-zinc-800">Web Scraping</span>
+                <span class="tech-tag bg-zinc-900 border-zinc-800">Predictive Analytics</span>
+                <span class="tech-tag bg-zinc-900 border-zinc-800">Data Visualization</span>
+              </div>
+              <a
+                href="https://github.com/RakeshsarmaKarra/Applied-Data-Science-Capstone-Project/tree/main"
+                target="_blank"
+                class="text-sm text-zinc-300 hover:text-white underline decoration-zinc-500 underline-offset-4">
+                View on GitHub →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- AHI App Development - Project Management Capstone Project Card -->
+        <div
+          class="block fade-up p-8 border border-zinc-800 hover:border-zinc-600 transition-colors bg-zinc-950/60 group rounded-2xl">
+          <div class="grid grid-cols-1 md:grid-cols-[1.7fr,1.3fr] gap-10 items-center">
+            <div>
+              <img
+                src="/portfolio/assets/Project%20Management%20MSET%205050-BIloragO.jpg"
+                alt="AHI App Development - Project Management Capstone"
+                class="w-full h-auto max-w-full object-contain rounded-xl border border-zinc-800 shadow-md bg-black" />
+            </div>
+            <div>
+              <h3
+                class="text-xl md:text-2xl font-serif text-zinc-100 mb-4 group-hover:text-white group-hover:underline decoration-zinc-500 underline-offset-4 transition-all">
+                AHI App Development - Project Management Capstone
+              </h3>
+              <p class="text-zinc-400 text-sm md:text-[15px] mb-6 leading-relaxed">
+                Led an end-to-end project management capstone to design and plan the AHI Marketing Data App, replacing
+                fragmented, manual market-tracking processes with a single real-time decision support application.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="tech-tag bg-zinc-900 border-zinc-800">Project Management</span>
+                <span class="tech-tag bg-zinc-900 border-zinc-800">Stakeholder Management</span>
+                <span class="tech-tag bg-zinc-900 border-zinc-800">Work Breakdown Structure</span>
+                <span class="tech-tag bg-zinc-900 border-zinc-800">Agile Planning</span>
+              </div>
+              <a
+                href="https://github.com/RakeshsarmaKarra/Project-Management-Capstone-Project"
+                target="_blank"
+                class="text-sm text-zinc-300 hover:text-white underline decoration-zinc-500 underline-offset-4">
+                View on GitHub →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Philippines MCCT Program Dashboard Project Card -->
+        <div
+          class="block fade-up p-8 border border-zinc-800 hover:border-zinc-600 transition-colors bg-zinc-950/60 group rounded-2xl">
+          <div class="grid grid-cols-1 md:grid-cols-[1.7fr,1.3fr] gap-10 items-center">
+            <div>
+              <img
+                src="/portfolio/assets/Tableau%20Dashboard-hykfElic.jpg"
+                alt="Philippines MCCT Program Dashboard"
+                class="w-full h-80 max-w-full object-contain rounded-xl border border-zinc-800 shadow-md bg-black" />
+            </div>
+            <div>
+              <h3
+                class="text-xl md:text-2xl font-serif text-zinc-100 mb-4 group-hover:text-white group-hover:underline decoration-zinc-500 underline-offset-4 transition-all">
+                Philippines MCCT Program Dashboard
+              </h3>
+              <p class="text-zinc-400 text-sm md:text-[15px] mb-6 leading-relaxed">
+                Designed an interactive Tableau dashboard on Pantawid Indigenous Peoples MCCT data to profile
+                beneficiaries by region, age, and gender, highlight underserved provinces, and surface insights for
+                program coverage, education, and healthcare planning.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="tech-tag bg-zinc-900 border-zinc-800">Tableau</span>
+                <span class="tech-tag bg-zinc-900 border-zinc-800">Tableau Prep</span>
+              </div>
+              <a
+                href="https://github.com/RakeshsarmaKarra/Tableau-Dashboard"
+                target="_blank"
+                class="text-sm text-zinc-300 hover:text-white underline decoration-zinc-500 underline-offset-4">
+                View on GitHub →
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills & Education Section -->
+  <section id="education"
+    class="py-12 md:py-16 px-6 md:px-12 lg:px-16 bg-zinc-900 text-white border-t border-zinc-500">
+    <div class="mx-auto grid grid-cols-1 gap-24">
+
+      <!-- Education, Certifications, Honors -->
+      <div class="fade-up">
+        <span class="section-title">Education</span>
+        <div class="space-y-8">
+          <div>
+            <div class="flex justify-between items-baseline mb-2">
+              <h3 class="text-xl font-serif">M.S. Mathematics &amp; Statistics (Data Science &amp; Advanced Analytics), Jan 2023 - Dec 2024</h3>
+              <!-- <span class="text-zinc-500">January 2023 – Decenber 2024</span>   -->
+            </div>
+            <p class="text-zinc-400 text-sm">University of North Texas, United States</p>
+          </div>
+        </div>     
+      </div>
+    </div>
+  </section>
+          
+  
+  <section id="certifications"
+  class="py-20 md:py-32 px-6 md:px-16 lg:px-24 bg-zinc-900 text-white border-t border-zinc-500">
+  
+  <div class="mx-auto">
+    <span class="section-title">Certifications</span>
+
+    <!-- Certifications by Provider (2-column grid) -->
+    <div class="grid grid-cols-1 xl:grid-cols-2 gap-8 mt-12">
+
+      <!-- ==================== IBM Data Science Professional Certificate Group ==================== -->
+      <details class="group border border-zinc-800 rounded-2xl bg-zinc-900/09 overflow-hidden hover:border-zinc-600 transition-colors">
+        <summary class="cursor-pointer p-6 font-medium text-zinc-100 hover:bg-zinc-900/40 transition-colors flex justify-between items-center">
+          <span>IBM Data Science Professional Certificate - 11</span>
+          <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </summary>
+        
+        <div class="p-8 pt-2">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Certificate 1 -->
+            <div class="flex justify-center items-center p-4">
+              <img
+                src="/portfolio/assets/IBM%20Data%20Science%20Professional%20Certificate-CKyexpLP.jpg"
+                alt="IBM Data Science Professional Certificate"
+                class="w-full h-auto max-h-64 object-contain rounded-xl border border-zinc-800 shadow-md" />
+            </div>
+
+            <!-- Certificate 2 -->
+            <div class="flex justify-center items-center p-4">
+              <img
+                src="/portfolio/assets/IBM%20What%20is%20Data%20Science-47b7wwll.jpg"
+                alt="IBM What is Data Science"
+                class="w-full h-auto max-h-64 object-contain rounded-xl border border-zinc-800 shadow-md" />
+            </div>
+
+            <!-- Certificate 3 -->
+            <div class="flex justify-center items-center p-4">
+              <img
+                src="/portfolio/assets/IBM%20Tools%20for%20Data%20Science-BUq36HZS.jpg"
+                alt="IBM Tools for Data Science"
+                class="w-full h-auto max-h-64 object-contain rounded-xl border border-zinc-800 shadow-md" />
+            </div>
+
+            <!-- Certificate 4 -->
+            <div class="flex justify-center items-center p-4">
+              <img
+                src="/portfolio/assets/IBM%20Data%20Science%20Methodology-DszFsK_l.jpg"
+                alt="IBM Data Science Methodology"
+                class="w-full h-auto max-h-64 object-contain rounded-xl border border-zinc-800 shadow-md" />
+            </div>
+
+            <!-- Certificate 5 -->
+            <div class="flex justify-center items-center p-4">
+              <img
+                src="/portfolio/assets/IBM%20Python%20for%20Data%20Science_%20AI%20_%20Development-BJrGHJSn.jpg"
+                alt="IBM Python for Data Science, AI & Development"
+                class="w-full h-auto max-h-64 object-contain rounded-xl border border-zinc-800 shadow-md" />
+            </div>
+
+            <!-- Certificate 6 -->
+            <div class="flex justify-center items-center p-4">
+              <img
+                src="/portfolio/assets/IBM%20Python%20Project%20for%20Data%20Science-MKW57FTu.jpg"
+                alt="IBM Python Project for Data Science"
+                class="w-full h-auto max-h-64 object-contain rounded-xl border border-zinc-800 shadow-md" />
+            </div>
+
+            <!-- Certificate 7 -->
+            <div class="flex justify-center items-center p-4">
+              <img
+                src="/portfolio/assets/IBM%20Databases%20and%20SQL%20for%20Data%20Science%20with%20Python-DKj5PPlo.jpg"
+                alt="IBM Databases and SQL for Data Science with Python"
+                class="w-full h-auto max-h-64 object-contain rounded-xl border border-zinc-800 shadow-md" />
+            </div>
+
+            <!-- Certificate 8 -->
+            <div class="flex justify-center items-center p-4">
+              <img
+                src="/portfolio/assets/IBM%20Data%20Analysis%20with%20Python-BTR39Rcr.jpg"
+                alt="IBM Data Analysis with Python"
+                class="w-full h-auto max-h-64 object-contain rounded-xl border border-zinc-800 shadow-md" />
+            </div>
+
+            <!-- Certificate 9 -->
+            <div class="flex justify-center items-center p-4">
+              <img
+                src="/portfolio/assets/IBM%20Data%20Visualization%20with%20Python-x9zxMzQi.jpg"
+                alt="IBM Data Visualization with Python"
+                class="w-full h-auto max-h-64 object-contain rounded-xl border border-zinc-800 shadow-md" />
+            </div>
+
+            <!-- Certificate 10 -->
+            <div class="flex justify-center items-center p-4">
+              <img
+                src="/portfolio/assets/IBM%20Machine%20Learning%20with%20Python-DY0vVsBW.jpg"
+                alt="IBM Machine Learning with Python"
+                class="w-full h-auto max-h-64 object-contain rounded-xl border border-zinc-800 shadow-md" />
+            </div>
+
+            <!-- Certificate 11 -->
+            <div class="flex justify-center items-center p-4">
+              <img
+                src="/portfolio/assets/IBM%20Applied%20Data%20Science%20Capstone-yIh1Bskf.jpg"
+                alt="IBM Applied Data Science Capstone"
+                class="w-full h-auto max-h-64 object-contain rounded-xl border border-zinc-800 shadow-md" />
+            </div>
+
+          </div>
+        </div>
+      </details>
+
+
+      <!-- ==================== Artificial Intelligence Certificates Group ==================== -->
+      <details class="group border border-zinc-800 rounded-2xl bg-zinc-900/09 overflow-hidden hover:border-zinc-600 transition-colors">
+        <summary class="cursor-pointer p-6 font-medium text-zinc-100 hover:bg-zinc-900/40 transition-colors flex justify-between items-center">
+          <span>Artificial Intelligence Certificates - 10</span>
+          <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </summary>
+        
+        <div class="p-8 pt-2">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Certificate 1 -->
+            <div class="flex justify-center items-center p-4">
+              <img
+                src="/portfolio/assets/AI%20Fundamentals%20Certificate-PUtHt_eo.jpg"
+                alt="AI Fundamentals Certificate"
+                class="w-full h-auto max-h-64 object-contain rounded-xl border border-zinc-800 shadow-md" />
+            </div>
+
+            <!-- Certificate 2 -->
+            <div class="flex justify-center items-center p-4">
+              <img
+                src="/portfolio/assets/AI%20Python%20for%20Beginners-CyYplexR.jpg"
+                alt="AI Python for Beginners"
+                class="w-full h-auto max-h-64 object-contain rounded-xl border border-zinc-800 shadow-md" />
+            </div>
+
+            <!-- Certificate 3 -->
+            <div class="flex justify-center items-center p-4">
+              <img
+                src="/portfolio/assets/AI%20-%20FLN_%20THECB%20-%20Certificate-7jlP3IAV.jpg"
+                alt="Generative AI"
+                class="w-full h-auto max-h-64 object-contain rounded-xl border border-zinc-800 shadow-md" />
+            </div>
+
+            <!-- Certificate 4 -->
+            <div class="flex justify-center items-center p-4">
+              <img
+                src="/portfolio/assets/Generative%20AI%20-%20Prompt%20Engineering%20Basics-Bg4Ddeo7.jpg"
+                alt="Generative AI - Prompt Engineering Basics"
+                class="w-full h-auto max-h-64 object-contain rounded-xl border border-zinc-800 shadow-md" />
+            </div>
+
+            <!-- Certificate 5 -->
+            <div class="flex justify-center items-center p-4">
+              <img
+                src="/portfolio/assets/Generative%20AI%20-%20Impact_%20Considerations%20and%20Ethical%20Issues-BazxBQkB.jpg"
+                alt="Generative AI - Impact, Considerations and Ethical Issues"
+                class="w-full h-auto max-h-64 object-contain rounded-xl border border-zinc-800 shadow-md" />
+            </div>
+
+            <!-- Certificate 6 -->
+            <div class="flex justify-center items-center p-4">
+              <img
+                src="/portfolio/assets/Leveraging%20AI%20for%20Enhanced%20Content%20Creation-HdkgWepY.jpg"
+                alt="Leveraging AI for Enhanced Content Creation"
+                class="w-full h-auto max-h-64 object-contain rounded-xl border border-zinc-800 shadow-md" />
+            </div>
+
+            <!-- Certificate 7 -->
+            <div class="flex justify-center items-center p-4">
+              <img
+                src="/portfolio/assets/OpenAI%20GPTs%20-%20Creating%20Your%20Own%20Custom%20AI%20Assistants-DtGuWPSE.jpg"
+                alt="OpenAI GPTs - Creating Your Own Custom AI Assistants"
+                class="w-full h-auto max-h-64 object-contain rounded-xl border border-zinc-800 shadow-md" />
+            </div>
+
+            <!-- Certificate 8 -->
+            <div class="flex justify-center items-center p-4">
+              <img
+                src="/portfolio/assets/Innovative%20Teaching%20with%20ChatGPT-B7VOvx5s.jpg"
+                alt="Innovative Teaching with ChatGPT"
+                class="w-full h-auto max-h-64 object-contain rounded-xl border border-zinc-800 shadow-md" />
+            </div>
+
+            <!-- Certificate 9 -->
+            <div class="flex justify-center items-center p-4">
+              <img
+                src="/portfolio/assets/Artificial%20Intelligence%20Data%20Fairness%20and%20Bias-D_kqlF5X.jpg"
+                alt="Artificial Intelligence Data Fairness and Bias"
+                class="w-full h-auto max-h-64 object-contain rounded-xl border border-zinc-800 shadow-md" />
+            </div>
+
+            <!-- Certificate 10 -->
+            <div class="flex justify-center items-center p-4">
+              <img
+                src="/portfolio/assets/Artificial%20Intelligence%20(AI)%20Education%20for%20Teachers-8Tr6YdhB.jpg"
+                alt="Artificial Intelligence (AI) Education for Teachers"
+                class="w-full h-auto max-h-64 object-contain rounded-xl border border-zinc-800 shadow-md" />
+            </div>
+
+          </div>
+        </div>
+      </details>
+
+
+      <!-- ==================== Data Camp Certificates Group ==================== -->
+      <details class="group border border-zinc-800 rounded-2xl bg-zinc-900/09 overflow-hidden hover:border-zinc-600 transition-colors">
+        <summary class="cursor-pointer p-6 font-medium text-zinc-100 hover:bg-zinc-900/40 transition-colors flex justify-between items-center">
+          <span>Data Camp Certificates - 5</span>
+          <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </summary>
+        
+        <div class="p-8 pt-2">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Certificate 1 -->
+            <div class="flex justify-center items-center p-4">
+              <img
+                src="/portfolio/assets/Exploratory%20Data%20Analysis%20in%20R-CP8wYspF.jpg"
+                alt="Exploratory Data Analysis in R"
+                class="w-full h-auto max-h-64 object-contain rounded-xl border border-zinc-800 shadow-md" />
+            </div>
+
+            <!-- Certificate 2 -->
+            <div class="flex justify-center items-center p-4">
+              <img
+                src="/portfolio/assets/Introduction%20to%20Regression%20in%20R-h7z-Uehu.jpg"
+                alt="Introduction to Regression in R"
+                class="w-full h-auto max-h-64 object-contain rounded-xl border border-zinc-800 shadow-md" />
+            </div>
+
+            <!-- Certificate 3 -->
+            <div class="flex justify-center items-center p-4">
+              <img
+                src="/portfolio/assets/Intermediate%20Regression%20in%20R-BUpwu2ir.jpg"
+                alt="Intermediate Regression in R"
+                class="w-full h-auto max-h-64 object-contain rounded-xl border border-zinc-800 shadow-md" />
+            </div>
+
+            <!-- Certificate 4 -->
+            <div class="flex justify-center items-center p-4">
+              <img
+                src="/portfolio/assets/Machine%20Learning%20with%20caret%20in%20R-DVsDabyO.jpg"
+                alt="Machine Learning with caret in R"
+                class="w-full h-auto max-h-64 object-contain rounded-xl border border-zinc-800 shadow-md" />
+            </div>
+
+            <!-- Certificate 5 -->
+            <div class="flex justify-center items-center p-4">
+              <img
+                src="/portfolio/assets/Building%20Web%20Applications%20with%20Shiny%20in%20R-DAS5po0y.jpg"
+                alt="Building Web Applications with Shiny in R"
+                class="w-full h-auto max-h-64 object-contain rounded-xl border border-zinc-800 shadow-md" />
+            </div>
+
+          </div>
+        </div>
+      </details>
+
+
+      <!-- ==================== Other Certificates Group ==================== -->
+      <details class="group border border-zinc-800 rounded-2xl bg-zinc-900/09 overflow-hidden hover:border-zinc-600 transition-colors">
+        <summary class="cursor-pointer p-6 font-medium text-zinc-100 hover:bg-zinc-900/40 transition-colors flex justify-between items-center">
+          <span>Other Certificates - 4</span>
+          <svg class="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </summary>
+        
+        <div class="p-8 pt-2">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Certificate 1 -->
+            <div class="flex justify-center items-center p-4">
+              <img
+                src="/portfolio/assets/Project%20Management%20Capstone-CLDfRW-k.jpg"
+                alt="Project Management Capstone"
+                class="w-full h-auto max-h-64 object-contain rounded-xl border border-zinc-800 shadow-md" />
+            </div>
+
+            <!-- Certificate 2 -->
+            <div class="flex justify-center items-center p-4">
+              <img
+                src="/portfolio/assets/Cloud%20Computing%20Foundations-lrx3QK-E.jpg"
+                alt="Cloud Computing Foundations"
+                class="w-full h-auto max-h-64 object-contain rounded-xl border border-zinc-800 shadow-md" />
+            </div>
+
+            <!-- Certificate 3 -->
+            <div class="flex justify-center items-center p-4">
+              <img
+                src="/portfolio/assets/Databricks%20Fundamentals-DTmY5xfb.jpg"
+                alt="Databricks Fundamentals"
+                class="w-full h-auto max-h-64 object-contain rounded-xl border border-zinc-800 shadow-md" />
+            </div>
+
+            <!-- Certificate 4 -->
+            <div class="flex justify-center items-center p-4">
+              <img
+                src="/portfolio/assets/Hackerrank%20-%20SQL-3PigzA0q.png"
+                alt="Hacker Rank - SQL"
+                class="w-full h-auto max-h-64 object-contain rounded-xl border border-zinc-800 shadow-md" />
+            </div>
+
+    </div>
+  </section>
+
+  <section id="honors"
+  class="py-20 md:py-32 px-6 md:px-16 lg:px-24 bg-zinc-900 text-white border-t border-zinc-500">
+  
+  <div class="mx-auto">
+    <span class="section-title">Honors &amp; Recognitions</span>
+
+    <!-- Awards Grid (3-column on xl screens) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 mt-12">
+
+      <!-- AI In Action 2025 -->
+      <div class="block p-8 border border-zinc-800 hover:border-zinc-600 transition-colors bg-zinc-900/09 rounded-2xl">
+        <div class="w-full h-64 flex items-center justify-center bg-black rounded-xl mb-6">
+          <img
+            src="/portfolio/assets/Poster%20Presentation%20Winner-Crt6KeTf.jpeg"
+            alt="AI In Action 2025 - Exploring User Bias and Hallucinations in Generative AI Systems"
+            class="w-full h-64 object-cover rounded-xl" />
+        </div>
+        <div class="flex flex-col gap-2 items-center text-center">
+          <h4 class="text-base font-medium text-zinc-100">
+            AI In Action 2025 – Exploring User Bias and Hallucinations in Generative AI Systems
+          </h4>
+          <span class="text-sm text-zinc-400">
+            Poster Presentation – 2025
+          </span>
+        </div>
+      </div>
+
+
+      <!-- 2024 Humana-Mays Healthcare Analytics Case Competition -->
+      <div class="block p-8 border border-zinc-800 hover:border-zinc-600 transition-colors bg-zinc-900/09 rounded-2xl">
+        <div class="w-full h-64 flex items-center justify-center bg-black rounded-xl mb-6">
+          <img
+            src="/portfolio/assets/Humana%20Image-q4RiKGJf.jpg"
+            alt="2024 Humana-Mays Healthcare Analytics Case Competition"
+            class="w-full h-full object-cover rounded-xl" />
+        </div>
+        <div class="flex flex-col gap-2 items-center text-center">
+          <h4 class="text-base font-medium text-zinc-100">
+            2024 Humana-Mays Healthcare Analytics Case Competition
+          </h4>
+          <span class="text-sm text-zinc-400">
+            National Healthcare Analytics Case Competition – 2024
+          </span>
+        </div>
+      </div>
+
+
+      <!-- American Airlines Machine Learning Competition -->
+      <div class="block p-8 border border-zinc-800 hover:border-zinc-600 transition-colors bg-zinc-900/09 rounded-2xl">
+        <div class="w-full h-64 flex items-center justify-center bg-black rounded-xl mb-6">
+          <img
+            src="/portfolio/assets/American%20Airlines%20winning%20certificate-YjpflqlH.jpg"
+            alt="American Airlines Machine Learning Competition"
+            class="w-full h-full object-cover rounded-xl" />
+        </div>
+        <div class="flex flex-col gap-2 items-center text-center">
+          <h4 class="text-base font-medium text-zinc-100">
+            American Airlines Machine Learning Competition
+          </h4>
+          <span class="text-sm text-zinc-400">
+            Machine Learning Hackathon – 2024
+          </span>
+        </div>
+      </div>
+
+
+      <!-- UNT – Tuition Benefit Program Spring 2024 -->
+      <div class="block p-8 border border-zinc-800 hover:border-zinc-600 transition-colors bg-zinc-900/09 rounded-2xl">
+        <div class="w-full h-64 flex items-center justify-center bg-black rounded-xl mb-6">
+          <img
+            src="/portfolio/assets/TBP%20Award%20Spring'24-CCp7Txz9.jpg"
+            alt="UNT – Tuition Benefit Program Jan 2024 – May 2024"
+            class="w-full h-full object-cover rounded-xl" />
+        </div>
+        <div class="flex flex-col gap-2 items-center text-center">
+          <h4 class="text-base font-medium text-zinc-100">
+            UNT – Tuition Benefit Program (Spring 2024)
+          </h4>
+          <span class="text-sm text-zinc-400">
+            Jan 2024 – May 2024
+          </span>
+        </div>
+      </div>
+
+
+      <!-- UNT – Tuition Benefit Program Fall 2024 -->
+      <div class="block p-8 border border-zinc-800 hover:border-zinc-600 transition-colors bg-zinc-900/09 rounded-2xl">
+        <div class="w-full h-64 flex items-center justify-center bg-black rounded-xl mb-6">
+          <img
+            src="/portfolio/assets/TBP%20Award%20Fall'24-CaVuT2om.jpg"
+            alt="UNT – Tuition Benefit Program Aug 2024 – Dec 2024"
+            class="w-full h-full object-cover rounded-xl" />
+        </div>
+        <div class="flex flex-col gap-2 items-center text-center">
+          <h4 class="text-base font-medium text-zinc-100">
+            UNT – Tuition Benefit Program (Fall 2024)
+          </h4>
+          <span class="text-sm text-zinc-400">
+            Aug 2024 – Dec 2024
+          </span>
+        </div>
+      </div>
+
+
+      <!-- Silver Award – Citi Bank (CCPA 2020, CMR Project) -->
+      <div class="block p-8 border border-zinc-800 hover:border-zinc-600 transition-colors bg-zinc-900/09 rounded-2xl">
+        <div class="w-full h-64 flex items-center justify-center bg-zinc-800 rounded-xl mb-6">
+          <div class="text-5xl font-bold text-zinc-400">
+            Citi
+          </div>
+        </div>
+        <div class="flex flex-col gap-2 items-center text-center">
+          <h4 class="text-base font-medium text-zinc-100">
+            Silver Award – Citi Bank
+          </h4>
+          <span class="text-sm text-zinc-400">
+            California Consumer Privacy Act 2020 (CCPA) – CMR project
+          </span>
+        </div>
+      </div>
+
+
+      <!-- Bronze Award – Citi Bank (CMR to MDM Migration) -->
+      <div class="block p-8 border border-zinc-800 hover:border-zinc-600 transition-colors bg-zinc-900/09 rounded-2xl">
+        <div class="w-full h-64 flex items-center justify-center bg-zinc-800 rounded-xl mb-6">
+          <div class="text-5xl font-bold text-zinc-400">
+            Citi
+          </div>
+        </div>
+        <div class="flex flex-col gap-2 items-center text-center">
+          <h4 class="text-base font-medium text-zinc-100">
+            Bronze Award – Citi Bank
+          </h4>
+          <span class="text-sm text-zinc-400">
+            CMR to MDM migration project
+          </span>
+        </div>
+      </div>
+
+
+      <!-- Work Excellence Award – ICICI Bank -->
+      <div class="block p-8 border border-zinc-800 hover:border-zinc-600 transition-colors bg-zinc-900/09 rounded-2xl">
+        <div class="w-full h-64 flex items-center justify-center bg-zinc-800 rounded-xl mb-6">
+          <div class="text-5xl font-bold text-zinc-400">
+            ICICI
+          </div>
+        </div>
+        <div class="flex flex-col gap-2 items-center text-center">
+          <h4 class="text-base font-medium text-zinc-100">
+            Work Excellence Award – ICICI Bank
+          </h4>
+          <span class="text-sm text-zinc-400">
+            Recognition for outstanding delivery and performance
+          </span>
+        </div>
+      </div>
+
+
+    </div>
+    </div>
+
+  </section>        
+
+  <section id="skills"
+  class="py-20 md:py-32 px-6 md:px-16 lg:px-24 bg-zinc-900 text-white border-t border-zinc-500">
+  
+  <div class="mx-auto">
+    <span class="section-title">Technical Skills</span>
+
+
+    <!-- Skills Grid (3-column layout) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mt-12">
+
+
+      <!-- Programming & Scripting -->
+      <div class="p-6 border border-zinc-800 hover:border-zinc-600 transition-colors bg-zinc-900/09 rounded-xl">
+        <h4 class="text-sm font-semibold text-zinc-100 mb-3 flex items-center gap-2">
+          <span class="text-blue-400">◆</span>
+          Programming &amp; Scripting
+        </h4>
+        <p class="text-sm text-zinc-400 leading-relaxed">
+          Python (Pandas, NumPy, Scikit-learn, Statsmodels, Matplotlib, Seaborn), R (dplyr, ggplot2),
+          SAS (SAS EG, SAS DI, SAS Viya), Excel (Pivot Tables, Power Query, Functions),
+          SQL (CTE, window functions, joins, performance tuning)
+        </p>
+      </div>
+
+
+      <!-- Machine Learning & Predictive Modeling -->
+      <div class="p-6 border border-zinc-800 hover:border-zinc-600 transition-colors bg-zinc-900/09 rounded-xl">
+        <h4 class="text-sm font-semibold text-zinc-100 mb-3 flex items-center gap-2">
+          <span class="text-green-400">◆</span>
+          Machine Learning &amp; Predictive Modeling
+        </h4>
+        <p class="text-sm text-zinc-400 leading-relaxed">
+          Supervised Learning, Unsupervised Learning, Ensemble Models (XGBoost, LightGBM, CatBoost),
+          Random Forests, Gradient Boosting, Time Series Forecasting (SARIMA, ARIMA),
+          Clustering (K-Means, Hierarchical), Recommendation Systems, Anomaly Detection,
+          Root Cause Analysis, Feature Engineering, Model Evaluation (ROC-AUC, Precision, Recall, F1-score, Accuracy),
+          Bias &amp; Fairness Testing
+        </p>
+      </div>
+
+
+      <!-- Statistical & Experimental Methods -->
+      <div class="p-6 border border-zinc-800 hover:border-zinc-600 transition-colors bg-zinc-900/09 rounded-xl">
+        <h4 class="text-sm font-semibold text-zinc-100 mb-3 flex items-center gap-2">
+          <span class="text-purple-400">◆</span>
+          Statistical &amp; Experimental Methods
+        </h4>
+        <p class="text-sm text-zinc-400 leading-relaxed">
+          Hypothesis Testing, A/B Testing, Experimental Design, Regression Modeling, Churn Analysis,
+          Demand Forecasting, Segmentation, Confidence Intervals, p-value Interpretation, t-tests,
+          Chi-square Tests, Correlation Analysis, Causality Analysis, Significance Testing
+        </p>
+      </div>
+
+
+      <!-- Data Engineering & MLOps -->
+      <div class="p-6 border border-zinc-800 hover:border-zinc-600 transition-colors bg-zinc-900/09 rounded-xl">
+        <h4 class="text-sm font-semibold text-zinc-100 mb-3 flex items-center gap-2">
+          <span class="text-orange-400">◆</span>
+          Data Engineering &amp; MLOps
+        </h4>
+        <p class="text-sm text-zinc-400 leading-relaxed">
+          Apache Spark, PySpark, Airflow, Delta Lake, dbt (models, tests, docs),
+          Data Quality Validation, ETL/ELT Pipeline Development
+        </p>
+      </div>
+
+
+      <!-- Cloud Platforms -->
+      <div class="p-6 border border-zinc-800 hover:border-zinc-600 transition-colors bg-zinc-900/09 rounded-xl">
+        <h4 class="text-sm font-semibold text-zinc-100 mb-3 flex items-center gap-2">
+          <span class="text-cyan-400">◆</span>
+          Cloud Platforms
+        </h4>
+        <p class="text-sm text-zinc-400 leading-relaxed">
+          Microsoft Azure (Data &amp; AI stack), AWS (SageMaker, Redshift, EC2, S3),
+          GCP (BigQuery, Vertex AI – exposure), Cloud-based ML &amp; Analytics Workloads
+        </p>
+      </div>
+
+
+      <!-- Databases & Data Warehousing -->
+      <div class="p-6 border border-zinc-800 hover:border-zinc-600 transition-colors bg-zinc-900/09 rounded-xl">
+        <h4 class="text-sm font-semibold text-zinc-100 mb-3 flex items-center gap-2">
+          <span class="text-yellow-400">◆</span>
+          Databases &amp; Data Warehousing
+        </h4>
+        <p class="text-sm text-zinc-400 leading-relaxed">
+          PostgreSQL, Snowflake, Amazon Redshift, SQL Server, BigQuery,
+          Delta Lake, Databricks, Data Modeling for Analytics &amp; Reporting
+        </p>
+      </div>
+
+
+      <!-- Data Visualization & BI Tools -->
+      <div class="p-6 border border-zinc-800 hover:border-zinc-600 transition-colors bg-zinc-900/09 rounded-xl">
+        <h4 class="text-sm font-semibold text-zinc-100 mb-3 flex items-center gap-2">
+          <span class="text-pink-400">◆</span>
+          Data Visualization &amp; BI Tools
+        </h4>
+        <p class="text-sm text-zinc-400 leading-relaxed">
+          Power BI, Tableau, Tableau Prep, Looker Studio (Google Data Studio),
+          Streamlit, Plotly, SAS Viya, Executive Dashboards,
+          Interactive Dashboards, Drill-down Reporting
+        </p>
+      </div>
+
+
+      <!-- Fraud & Business Analytics Domains -->
+      <div class="p-6 border border-zinc-800 hover:border-zinc-600 transition-colors bg-zinc-900/09 rounded-xl">
+        <h4 class="text-sm font-semibold text-zinc-100 mb-3 flex items-center gap-2">
+          <span class="text-red-400">◆</span>
+          Fraud &amp; Business Analytics Domains
+        </h4>
+        <p class="text-sm text-zinc-400 leading-relaxed">
+          Credit Portfolio Analytics, Fraud Detection, Compliance Reporting,
+          Regulatory Reporting (CCPA 2020), Customer Retention,
+          Customer Lifetime Value, Operational Performance Monitoring,
+          Dynamic Pricing, Logistics Cost Optimization
+        </p>
+      </div>
+
+
+      <!-- Project Management -->
+      <div class="p-6 border border-zinc-800 hover:border-zinc-600 transition-colors bg-zinc-900/09 rounded-xl">
+        <h4 class="text-sm font-semibold text-zinc-100 mb-3 flex items-center gap-2">
+          <span class="text-indigo-400">◆</span>
+          Project Management
+        </h4>
+        <p class="text-sm text-zinc-400 leading-relaxed">
+          Agile &amp; Scrum Methodologies, Work Breakdown Structure (WBS),
+          Risk Identification &amp; Mitigation Planning, Scope &amp; Timeline Management,
+          30–70% Rules, Stakeholder Alignment &amp; Status Reporting
+        </p>
+      </div>
+
+
+      <!-- Version Control & Collaboration -->
+      <div class="p-6 border border-zinc-800 hover:border-zinc-600 transition-colors bg-zinc-900/09 rounded-xl">
+        <h4 class="text-sm font-semibold text-zinc-100 mb-3 flex items-center gap-2">
+          <span class="text-teal-400">◆</span>
+          Version Control &amp; Collaboration
+        </h4>
+        <p class="text-sm text-zinc-400 leading-relaxed">
+          Git, GitHub, Bitbucket, Confluence, JIRA, Agile, Scrum,
+          Stakeholder Communication, Data-Driven Storytelling
+        </p>
+      </div>
+
+
+      <!-- Soft Skills -->
+      <div class="p-6 border border-zinc-800 hover:border-zinc-600 transition-colors bg-zinc-900/09 rounded-xl">
+        <h4 class="text-sm font-semibold text-zinc-100 mb-3 flex items-center gap-2">
+          <span class="text-emerald-400">◆</span>
+          Soft Skills
+        </h4>
+        <p class="text-sm text-zinc-400 leading-relaxed">
+          Excellent Written and Verbal Communication Skills, Strong Problem-Solving Skills,
+          Ability To Collaborate, Attention To Detail, Team Player, Self-Motivated
+        </p>
+      </div>
+
+
+    </div>
+  </div>
+
+
+  </section>
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-40 px-6 md:px-16 lg:px-24 bg-zinc-950 text-center border-t border-zinc-500">
+    <div class="max-w-3xl mx-auto fade-up">
+      <h2 class="text-4xl md:text-5xl font-serif mb-8 text-white">Let's Connect.</h2>
+      <p class="text-zinc-500 text-lg font-light mb-12">
+        I am open to opportunities in Data Science, Machine Learning, and Analytics Engineering.
+      </p>
+      <div class="flex flex-col md:flex-row justify-center gap-8 md:gap-16 items-center">
+        <a href="mailto:sarmak.dsda@gmail.com"
+          class="text-zinc-300 hover:text-white transition-colors border-b border-zinc-800 hover:border-white pb-1">Email</a>
+        <a href="https://www.linkedin.com/in/rakesh-da/" target="_blank"
+          class="text-zinc-300 hover:text-white transition-colors border-b border-zinc-800 hover:border-white pb-1">LinkedIn</a>
+        <a href="https://github.com/RakeshsarmaKarra" target="_blank"
+          class="text-zinc-300 hover:text-white transition-colors border-b border-zinc-800 hover:border-white pb-1">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>
