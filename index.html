@@ -1406,19 +1406,27 @@
       Recommendations
     </h2>
 
-    <!-- 1 column on small screens, 2 columns on md+ -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <!-- 1 col on small, 2 cols (50%/50%) on md+ -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
 
       <!-- Recommendation 1: Rahul K -->
-      <div class="bg-zinc-900 border border-zinc-800 rounded-lg p-6 h-full">
+      <div class="bg-zinc-900 border border-zinc-800 rounded-lg p-6 flex flex-col h-full">
         <div class="flex items-center justify-between mb-3">
-          <div>
-            <h3 class="text-lg font-semibold text-zinc-100">
-              Rahul K
-            </h3>
-            <p class="text-sm text-zinc-400">
-              Senior Associate – Data Governance
-            </p>
+          <div class="flex items-center gap-3">
+            <!-- Avatar -->
+            <img
+              src="https://via.placeholder.com/64"
+              alt="Rahul K"
+              class="w-10 h-10 rounded-full object-cover"
+            />
+            <div>
+              <h3 class="text-lg font-semibold text-zinc-100">
+                Rahul K
+              </h3>
+              <p class="text-sm text-zinc-400">
+                Senior Associate – Data Governance
+              </p>
+            </div>
           </div>
           <a
             href="https://www.linkedin.com/in/rhkm"
@@ -1430,7 +1438,7 @@
           </a>
         </div>
 
-        <p class="text-sm text-zinc-300 leading-relaxed">
+        <p class="text-sm text-zinc-300 leading-relaxed flex-1">
           “I had the pleasure of working with Rakesh and consistently found him to be dependable,
           detail-oriented, and proactive in his approach. He communicates clearly, collaborates well,
           and takes ownership of his responsibilities. Rakesh would be a strong asset to any team he joins.”
@@ -1442,15 +1450,23 @@
       </div>
 
       <!-- Recommendation 2: John Schroeder -->
-      <div class="bg-zinc-900 border border-zinc-800 rounded-lg p-6 h-full">
+      <div class="bg-zinc-900 border border-zinc-800 rounded-lg p-6 flex flex-col h-full">
         <div class="flex items-center justify-between mb-3">
-          <div>
-            <h3 class="text-lg font-semibold text-zinc-100">
-              John Schroeder
-            </h3>
-            <p class="text-sm text-zinc-400">
-              Data Scientist Principal – Lockheed Martin
-            </p>
+          <div class="flex items-center gap-3">
+            <!-- Avatar -->
+            <img
+              src="https://via.placeholder.com/64"
+              alt="John Schroeder"
+              class="w-10 h-10 rounded-full object-cover"
+            />
+            <div>
+              <h3 class="text-lg font-semibold text-zinc-100">
+                John Schroeder
+              </h3>
+              <p class="text-sm text-zinc-400">
+                Data Scientist Principal – Lockheed Martin
+              </p>
+            </div>
           </div>
           <a
             href="https://www.linkedin.com/in/johnschroeder1"
@@ -1476,7 +1492,7 @@
           His positive attitude and effective communication skills—both verbal and written—greatly
           enhanced the learning environment.
         </p>
-        <p class="mt-2 text-sm text-zinc-300 leading-relaxed">
+        <p class="mt-2 text-sm text-zinc-300 leading-relaxed flex-1">
           Rakesh has shown kindness and encouragement to students who seek his assistance, and he is
           always willing to share his experiences with fellow teaching assistants. Given his outstanding
           performance as my TA, his proven track record in previous roles, and his dedication to continuous
@@ -1491,6 +1507,7 @@
     </div>
   </div>
 </section>
+
 
 
 
