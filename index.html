@@ -35,8 +35,6 @@
         class="nav-link text-[10px] uppercase tracking-[0.2em] text-zinc-500 hover:text-black">Projects</a>
       <a href="#skills"
         class="nav-link text-[10px] uppercase tracking-[0.2em] text-zinc-500 hover:text-black">Skills</a>
-      <a href="#hobbies"
-        class="nav-link text-[10px] uppercase tracking-[0.2em] text-zinc-500 hover:text-black">Hobbies</a>
       <a href="#contact"
         class="nav-link text-[10px] uppercase tracking-[0.2em] text-zinc-500 hover:text-black">Contact</a>
     </div>
@@ -61,7 +59,6 @@
         class="mobile-nav-link text-2xl font-serif italic text-zinc-800 hover:text-black">Experience</a>
       <a href="#projects" class="mobile-nav-link text-2xl font-serif italic text-zinc-800 hover:text-black">Projects</a>
       <a href="#skills" class="mobile-nav-link text-2xl font-serif italic text-zinc-800 hover:text-black">Skills</a>
-      <a href="#hobbies" class="mobile-nav-link text-2xl font-serif italic text-zinc-800 hover:text-black">Hobbies</a>
       <a href="#contact" class="mobile-nav-link text-2xl font-serif italic text-zinc-800 hover:text-black">Contact</a>
     </div>
   </nav>
@@ -86,19 +83,15 @@
 
   <!-- Hero Section -->
   <section id="home" class="flex flex-col px-6 md:px-12 relative max-w-7xl mx-auto pt-40 pb-20 md:pt-52 md:pb-32">
-    <h2 class="text-zinc-500 uppercase tracking-[0.4em] text-xs mb-6 fade-up">Data Scientist & Machine Learning Engineer
+    <h2 class="text-zinc-500 uppercase tracking-[0.4em] text-xs mb-6 fade-up">Machine Learning Engineer
     </h2>
     <h1 class="text-4xl md:text-7xl font-serif leading-[1.1] tracking-tight mb-8 fade-up text-zinc-100"
       style="transition-delay: 0.1s">
-      Data-Centric Intelligence <br />
-      <span class="italic text-zinc-400 text-3xl md:text-5xl block mt-4">From data understanding to reliable models and
-        systems, I like solving business problems using data</span>
+      I build production ML systems that don't break when things go wrong.
     </h1>
     <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 fade-up" style="transition-delay: 0.2s">
       <p class="max-w-xl text-zinc-400 text-lg font-light leading-relaxed">
-        I build robust, data-driven solutions across data science, machine learning, deep learning, and applied AI.
-        Recently graduated from the University of Padua in ICT (AI Specialization), with a strong focus on translating
-        data into dependable real-world systems.
+        From 5000-node water networks to 4-layer SQL optimization pipelines. I work end-to-end across the ML lifecycle: data pipelines, model training, evaluation, API deployment, monitoring. My stack centers on Python, PyTorch, FastAPI, and the LLM tooling around LangChain, ChromaDB, and RAG.
       </p>
       <div class="hidden md:flex flex-col gap-2">
         <span class="text-zinc-600 text-[10px] uppercase tracking-widest">Base</span>
@@ -114,15 +107,10 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-16 items-start">
         <div class="md:col-span-2">
           <p class="text-2xl font-light leading-relaxed mb-8 fade-up text-zinc-200">
-            I started in Mechanical Engineering, building a solid understanding of systems, modeling, and optimization.
-            Over time, I realized that many real-world problems could be solved more efficiently through data-driven
-            intelligence, so I transitioned into AI and Data Science.
+            My background started in mechanical engineering. I liked solving physical systems with math, heat transfer, fluid dynamics, the kind of problems where you write an equation and predict reality. Somewhere between my bachelor's in İzmir and my master's in Padova, I realized the systems I actually wanted to build weren't made of metal. They were made of data.
           </p>
           <p class="text-lg text-zinc-500 font-light leading-relaxed fade-up">
-            I recently completed my Master’s in ICT (AI Specialization) at the University of Padua. I specialize in
-            applying machine learning and optimization techniques to real-world infrastructure challenges, focusing on
-            calibrating systems and improving performance through data. My goal is to translate complex data into
-            actionable solutions that deliver measurable business impact.
+            I spent the last nine months at FORE on my MSc thesis, shipping a Python optimization library that now replaces €200,000+ hardware deployments for Italian water networks. In parallel I built SQLOps Guardian, a 4-layer SQL optimization pipeline designed to gracefully degrade when the LLM is unavailable because production systems should never hard-fail on a single dependency. I work end-to-end across the ML lifecycle: data pipelines, model training, evaluation, API deployment, monitoring. Looking for Machine Learning Engineer or AI Engineer roles, remote or EU-based.
           </p>
         </div>
         <div class="relative fade-up group">
@@ -167,23 +155,18 @@
         <!-- Role 2 -->
         <div class="fade-up group">
           <div class="flex flex-col md:flex-row justify-between md:items-baseline mb-6">
-            <h3 class="text-3xl font-serif italic mb-2 md:mb-0 text-zinc-100">Data Scientist Intern</h3>
+            <h3 class="text-3xl font-serif italic mb-2 md:mb-0 text-zinc-100">Data Science Intern
+              <span class="block text-zinc-400 uppercase tracking-[0.2em] text-xs mt-2">Veri Bilimi Okulu</span>
+            </h3>
             <div class="flex flex-col md:items-end text-right md:w-auto">
               <span class="text-zinc-400 text-sm font-medium mb-1">September 2022 – June 2023</span>
               <span class="text-zinc-500 text-xs tracking-widest uppercase">Istanbul, Turkey</span>
             </div>
           </div>
           <ul class="list-disc list-outside ml-5 space-y-4 text-zinc-400 font-light max-w-3xl marker:text-zinc-600">
-            <li>Achieved validation accuracy of <strong>95.49%</strong> by comparing multiple neural network
-              architectures, including DenseNet, ResNet, YOLO architectures on a balanced dataset of 4,575 chest X-ray
-              images that were COVID-19 (CT), SARS CoV-2 (CT) and normal health conditions from X-ray images by
-              utilizing different pre-processing techniques.</li>
-            <li>Developed a Python-based scraper to gather over <strong>+5000 data entries</strong> from property
-              listings, processed and cleansed to refine 26 key features from raw data. Achieving a model accuracy peak
-              of <strong>82% with XGBoost</strong>, compared to other algorithm for the regression problem. Enhanced
-              model calibration by deploying advanced feature engineering, including IQR methods for outlier management.
-            </li>
-            <li>Decreased <strong>15%</strong> of the budget consumption of the customers for the house market.</li>
+            <li>Built an end-to-end house price prediction system for a real estate consulting client navigating Turkey's inflation-driven housing market, where listing prices were systematically drifting away from actual sale values.</li>
+            <li>Developed a resilient web scraping pipeline in Python using Selenium and Scrapy, collecting 5000+ listings from sahibinden and other major Turkish real estate portals. Worked directly with a domain-expert real estate professional to engineer 26 features combining neighborhood-level signals, structural property attributes, and market indicators.</li>
+            <li>Trained and tuned regression models (XGBoost, Random Forest) with IQR-based outlier handling, surfacing a consistent gap between listing prices and realized sale values that the client's agents used to advise both buyers and sellers. Stack: Python, XGBoost, scikit-learn, Selenium, Scrapy, Pandas.</li>
           </ul>
         </div>
       </div>
@@ -196,24 +179,44 @@
       <span class="section-title border-zinc-800">Selected Projects</span>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-        <!-- Project 1: QuitSmart -->
-        <a href="https://github.com/berkersenol/QuitSmart-RAG" target="_blank"
+        <!-- Project 1: SQLOps Guardian -->
+        <a href="https://github.com/berkersenol/sqlops-guardian" target="_blank"
           class="block fade-up p-8 border border-zinc-800 hover:border-zinc-700 transition-colors bg-zinc-950/50 group">
           <h3
             class="text-xl font-serif text-zinc-100 mb-4 group-hover:text-white group-hover:underline decoration-zinc-500 underline-offset-4 transition-all">
-            AI-Driven Smoking Cessation Tool</h3>
+            SQLOps Guardian</h3>
           <p class="text-zinc-400 text-sm mb-6 leading-relaxed">
-            Personalized support tool utilizing LLaMA2 (13B) and RAG. Delivers context-aware responses to support users,
-            leveraging vector databases for knowledge retrieval.
+            Full-stack SQL optimization tool with a 4-layer pipeline: deterministic linter, ChromaDB-backed RAG, Google Gemini rewriting, and SQLite operations layer with user feedback. Designed to gracefully degrade when the LLM is unavailable. 111+ backend tests. Dockerized with docker-compose and nginx.
           </p>
           <div class="flex flex-wrap gap-2">
-            <span class="tech-tag bg-zinc-900 border-zinc-800">NLP</span>
+            <span class="tech-tag bg-zinc-900 border-zinc-800">FastAPI</span>
+            <span class="tech-tag bg-zinc-900 border-zinc-800">ChromaDB</span>
             <span class="tech-tag bg-zinc-900 border-zinc-800">RAG</span>
-            <span class="tech-tag bg-zinc-900 border-zinc-800">Vector DB</span>
+            <span class="tech-tag bg-zinc-900 border-zinc-800">Gemini</span>
+            <span class="tech-tag bg-zinc-900 border-zinc-800">Docker</span>
+            <span class="tech-tag bg-zinc-900 border-zinc-800">React</span>
           </div>
         </a>
 
-        <!-- Project 2: Barbie Analysis -->
+        <!-- Project 3: Medical Image Classification -->
+        <a href="https://github.com/berkersenol/Chest-X-Ray-Classification-Benchmarking-CNN-Architectures-for-COVID-19-and-Pneumonia-Detection" target="_blank"
+          class="block fade-up p-8 border border-zinc-800 hover:border-zinc-700 transition-colors bg-zinc-950/50 group">
+          <h3
+            class="text-xl font-serif text-zinc-100 mb-4 group-hover:text-white group-hover:underline decoration-zinc-500 underline-offset-4 transition-all">
+            Medical Image Classification</h3>
+          <p class="text-zinc-400 text-sm mb-6 leading-relaxed">
+            Chest X-ray classification system trained on 4,575 images across COVID-19, SARS-CoV-2, and normal conditions. Compared DenseNet-121 (93% test accuracy) against a custom SE-attention CNN (91.8% validation accuracy) with 14x fewer parameters and 14x smaller model size.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="tech-tag bg-zinc-900 border-zinc-800">PyTorch</span>
+            <span class="tech-tag bg-zinc-900 border-zinc-800">DenseNet</span>
+            <span class="tech-tag bg-zinc-900 border-zinc-800">CNN</span>
+            <span class="tech-tag bg-zinc-900 border-zinc-800">Computer Vision</span>
+            <span class="tech-tag bg-zinc-900 border-zinc-800">Medical Imaging</span>
+          </div>
+        </a>
+
+        <!-- Project 4: Data-Driven Discourse Analysis -->
         <a href="https://github.com/berkersenol/The-Affect-of-Barbie-the-Movie-on-the-online-discussion-about-feminism"
           target="_blank"
           class="block fade-up p-8 border border-zinc-800 hover:border-zinc-700 transition-colors bg-zinc-950/50 group">
@@ -221,51 +224,40 @@
             class="text-xl font-serif text-zinc-100 mb-4 group-hover:text-white group-hover:underline decoration-zinc-500 underline-offset-4 transition-all">
             Data-Driven Discourse Analysis</h3>
           <p class="text-zinc-400 text-sm mb-6 leading-relaxed">
-            Analyzed feminist discourse dynamics on Reddit and TikTok using BERTopic, LIWC, and community detection
-            algorithms. Revealed key community drivers and sentiment distinctness.
+            Analyzed 4,000+ comments about the Barbie movie's feminist discourse on Reddit and TikTok using BERTopic for topic modeling (25+ clusters), Louvain community detection, and LIWC for linguistic sentiment analysis.
           </p>
           <div class="flex flex-wrap gap-2">
             <span class="tech-tag bg-zinc-900 border-zinc-800">Python</span>
             <span class="tech-tag bg-zinc-900 border-zinc-800">BERTopic</span>
-            <span class="tech-tag bg-zinc-900 border-zinc-800">Web Scraping</span>
-
-
+            <span class="tech-tag bg-zinc-900 border-zinc-800">Louvain</span>
+            <span class="tech-tag bg-zinc-900 border-zinc-800">LIWC</span>
           </div>
         </a>
 
-        <!-- Project 3: Chatbot -->
-        <a href="https://github.com/berkersenol/AI-Powered-Customer-Service-Chatbot-RAG-" target="_blank"
+        <!-- Project 5: QuitSmart-RAG -->
+        <a href="https://github.com/berkersenol/QuitSmart-RAG" target="_blank"
           class="block fade-up p-8 border border-zinc-800 hover:border-zinc-700 transition-colors bg-zinc-950/50 group">
           <h3
             class="text-xl font-serif text-zinc-100 mb-4 group-hover:text-white group-hover:underline decoration-zinc-500 underline-offset-4 transition-all">
-            AI-Powered Customer Service Chatbot (RAG)</h3>
+            QuitSmart-RAG</h3>
           <p class="text-zinc-400 text-sm mb-6 leading-relaxed">
-            Secure, context-aware chatbot using FastAPI, LangChain, and FAISS/ChromaDB. Implemented multi-turn
-            conversations and LLM safety mechanisms.
+            An early exploration into RAG-based conversational tools. A prototype smoking cessation assistant built on LLaMA2 with vector-database-backed retrieval, delivering context-aware responses from curated health guidance sources. Jupyter-notebook proof of concept predating SQLOps Guardian.
           </p>
           <div class="flex flex-wrap gap-2">
-            <span class="tech-tag bg-zinc-900 border-zinc-800">FastAPI</span>
+            <span class="tech-tag bg-zinc-900 border-zinc-800">LLaMA2</span>
             <span class="tech-tag bg-zinc-900 border-zinc-800">RAG</span>
-            <span class="tech-tag bg-zinc-900 border-zinc-800">LangChain</span>
+            <span class="tech-tag bg-zinc-900 border-zinc-800">Vector DB</span>
+            <span class="tech-tag bg-zinc-900 border-zinc-800">NLP</span>
+            <span class="tech-tag bg-zinc-900 border-zinc-800">Jupyter</span>
           </div>
         </a>
-
-        <!-- Project 4: GANs (Static) -->
-        <div
-          class="block fade-up p-8 border border-zinc-800 hover:border-zinc-700 transition-colors bg-zinc-950/50 group">
-          <h3 class="text-xl font-serif text-zinc-100 mb-4 transition-all">
-            Image-to-Image Translation with GANs</h3>
-          <p class="text-zinc-400 text-sm mb-6 leading-relaxed">
-            Implemented and compared U-Net, PatchGAN, and WGAN architectures on COCO and ImageNet datasets. Evaluated
-            performance using FID, PSNR, and SSIM metrics.
-          </p>
-          <div class="flex flex-wrap gap-2">
-            <span class="tech-tag bg-zinc-900 border-zinc-800">Computer Vision</span>
-            <span class="tech-tag bg-zinc-900 border-zinc-800">PyTorch</span>
-            <span class="tech-tag bg-zinc-900 border-zinc-800">GANs</span>
-
-          </div>
-        </div>
+      </div>
+      <div class="mt-12 text-right fade-up">
+        <a href="https://github.com/berkersenol" target="_blank"
+          class="text-zinc-500 hover:text-zinc-300 text-sm tracking-[0.1em] uppercase transition-colors inline-flex items-center gap-2">
+          View all projects on GitHub
+          <span aria-hidden="true">→</span>
+        </a>
       </div>
     </div>
   </section>
@@ -280,26 +272,18 @@
         <div class="space-y-12">
           <div>
             <div class="flex justify-between items-baseline mb-2">
-              <h3 class="text-xl font-serif">Master’s in ICT (AI)</h3>
+              <h3 class="text-xl font-serif">M.Sc. ICT — AI Specialization</h3>
               <span class="text-xs text-zinc-500">2022-2025</span>
             </div>
-            <p class="text-zinc-400 text-sm">University of Padua, Italy</p>
+            <p class="text-zinc-400 text-sm">Università degli Studi di Padova, Italy</p>
+            <p class="text-zinc-500 text-sm">Master's thesis at FORE: ML-based sensor optimization for municipal water networks.</p>
           </div>
           <div>
             <div class="flex justify-between items-baseline mb-2">
-              <h3 class="text-xl font-serif">B.S. Mechanical Engineering</h3>
+              <h3 class="text-xl font-serif">B.Sc. Mechanical Engineering</h3>
               <span class="text-xs text-zinc-500">2016-2020</span>
             </div>
             <p class="text-zinc-400 text-sm">İzmir University of Economics, Turkey</p>
-          </div>
-
-          <div class="pt-8 border-t border-zinc-900">
-            <span class="section-title !pl-0 !border-0 !mb-4">Certifications</span>
-            <ul class="space-y-2 text-zinc-500 text-sm">
-              <li>Deep Learning Specialization – DeepLearning.AI</li>
-              <li>Machine Learning – Stanford Online</li>
-              <li>Structuring Machine Learning Projects</li>
-            </ul>
           </div>
         </div>
       </div>
@@ -309,84 +293,57 @@
         <span class="section-title">Technical Skills</span>
         <div class="space-y-8">
           <div>
-            <h4 class="text-xs uppercase tracking-widest text-zinc-500 mb-4">Programming & Frameworks</h4>
+            <h4 class="text-xs uppercase tracking-widest text-zinc-500 mb-4">Languages & Core</h4>
             <div class="flex flex-wrap gap-2">
               <span class="tech-tag">Python</span>
+              <span class="tech-tag">SQL</span>
               <span class="tech-tag">C++</span>
               <span class="tech-tag">MATLAB</span>
-              <span class="tech-tag">FastAPI</span>
             </div>
           </div>
           <div>
             <h4 class="text-xs uppercase tracking-widest text-zinc-500 mb-4">ML & Deep Learning</h4>
             <div class="flex flex-wrap gap-2">
-              <span class="tech-tag">Scikit-learn</span>
-              <span class="tech-tag">TensorFlow</span>
               <span class="tech-tag">PyTorch</span>
+              <span class="tech-tag">scikit-learn</span>
+              <span class="tech-tag">TensorFlow</span>
+              <span class="tech-tag">XGBoost</span>
               <span class="tech-tag">OpenCV</span>
             </div>
           </div>
           <div>
-            <h4 class="text-xs uppercase tracking-widest text-zinc-500 mb-4">NLP</h4>
+            <h4 class="text-xs uppercase tracking-widest text-zinc-500 mb-4">LLMs & NLP</h4>
             <div class="flex flex-wrap gap-2">
               <span class="tech-tag">LangChain</span>
               <span class="tech-tag">LlamaIndex</span>
-              <span class="tech-tag">HuggingFace</span>
-              <span class="tech-tag">Transformers</span>
+              <span class="tech-tag">HuggingFace Transformers</span>
+              <span class="tech-tag">RAG</span>
+              <span class="tech-tag">ChromaDB</span>
+              <span class="tech-tag">Gemini API</span>
             </div>
           </div>
           <div>
-            <h4 class="text-xs uppercase tracking-widest text-zinc-500 mb-4">Data Wrangling & Feature Engineering</h4>
+            <h4 class="text-xs uppercase tracking-widest text-zinc-500 mb-4">Backend & Infrastructure</h4>
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-tag">FastAPI</span>
+              <span class="tech-tag">Docker</span>
+              <span class="tech-tag">docker-compose</span>
+              <span class="tech-tag">Nginx</span>
+              <span class="tech-tag">Pydantic</span>
+            </div>
+          </div>
+          <div>
+            <h4 class="text-xs uppercase tracking-widest text-zinc-500 mb-4">Data & Tooling</h4>
             <div class="flex flex-wrap gap-2">
               <span class="tech-tag">Pandas</span>
               <span class="tech-tag">NumPy</span>
               <span class="tech-tag">Matplotlib</span>
-              <span class="tech-tag">Seaborn</span>
-              <span class="tech-tag">PowerBI</span>
-            </div>
-          </div>
-          <div>
-            <h4 class="text-xs uppercase tracking-widest text-zinc-500 mb-4">Databases</h4>
-            <div class="flex flex-wrap gap-2">
+              <span class="tech-tag">Git</span>
               <span class="tech-tag">PostgreSQL</span>
-              <span class="tech-tag">SQL</span>
               <span class="tech-tag">SQLite</span>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Hobbies Section -->
-  <section id="hobbies" class="py-20 md:py-32 px-6 md:px-12 bg-zinc-900/50 text-zinc-300 border-t border-zinc-500">
-    <div class="max-w-4xl mx-auto">
-      <span class="section-title border-zinc-800">Interests & Hobbies</span>
-      <div class="space-y-8 text-lg font-light leading-relaxed text-zinc-400 fade-up">
-        <p>
-          Beyond my academic and professional interests, I value activities that help me grow both as a person and as a
-          collaborator. I played volleyball for five years, an experience that taught me discipline, commitment, and the
-          importance of working toward a shared goal. Being part of a team shaped how I approach challenges, reinforcing
-          the value of communication, consistency, and supporting others under pressure.
-        </p>
-        <p>
-          Outside of this structured environment, I enjoy watching anime, which offers me a more imaginative and
-          reflective space. Works such as <em>One Piece</em> and <em>Howl’s Moving Castle</em> stand out to me for their
-          rich worlds and emotionally driven stories. They encourage me to think creatively, see problems from different
-          perspectives, and appreciate the depth of well-designed systems and characters.
-        </p>
-        <p>
-          On a more social level, I enjoy spending time with friends at coffee shops, where conversations flow naturally
-          and shared moments create a sense of familiarity and belonging, similar to the atmosphere portrayed in the
-          series <em>Friends</em>. These moments allow me to slow down, recharge, and maintain a healthy balance between
-          focus and connection.
-        </p>
-        <p>
-          Finally, I have a strong passion for traveling, especially experiencing new places through the perspective of
-          local life. Immersing myself in different cultures has strengthened my adaptability, curiosity, and openness
-          to diverse ways of thinking, qualities that continuously influence both my personal mindset and my
-          professional approach.
-        </p>
       </div>
     </div>
   </section>
@@ -396,7 +353,7 @@
     <div class="max-w-3xl mx-auto fade-up">
       <h2 class="text-4xl md:text-5xl font-serif mb-8 text-white">Let's Connect.</h2>
       <p class="text-zinc-500 text-lg font-light mb-12">
-        I am open to opportunities in Data Science, AI Engineering, Machine Learning, Deep Learning.
+        Open to Machine Learning Engineer and AI Engineer roles, remote or EU-based. If you're building something in this space and think I could help, get in touch.
       </p>
       <div class="flex flex-col md:flex-row justify-center gap-8 md:gap-16 items-center">
         <a href="mailto:berkersenol@outlook.com"
