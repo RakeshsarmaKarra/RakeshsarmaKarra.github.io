@@ -1,1 +1,1 @@
-Rakeshsarma Karra Portfolio: https://RakeshsarmaKarra.github.io
+Berker Senol Portfolio: https://berkersenol.github.io
